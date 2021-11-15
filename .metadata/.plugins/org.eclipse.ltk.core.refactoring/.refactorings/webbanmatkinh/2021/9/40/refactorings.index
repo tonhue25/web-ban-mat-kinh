@@ -1,0 +1,26 @@
+1632634829255	Delete element
+1632644769357	Rename type 'WebSecurityConfig'
+1632657008250	Delete element
+1632657020491	Delete element
+1632658902428	Encapsulate field 'salePrice'
+1632661698937	Delete element
+1632663357886	Rename type 'UserCartId'
+1632663599314	Delete element
+1632664995918	Rename type 'Cart_Product'
+1632673079047	Delete element
+1632673479381	Copy compilation unit
+1632674842191	Copy compilation unit
+1632724900128	Rename type 'CartController'
+1632837823691	Delete element
+1632841083478	Delete element
+1632841155150	Delete element
+1632841160807	Delete element
+1632841169803	Delete element
+1632841174244	Delete element
+1632842830766	Delete element
+1632842838180	Delete element
+1632844429142	Delete element
+1632845637106	Delete element
+1632845645014	Delete element
+1632845931573	Rename type 'ProductCartController'
+1633025989986	Move 'checkout.jsp' to 'web'

@@ -1,0 +1,64 @@
+package com.webbanmatkinh.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.paypal.api.payments.Amount;
+import com.paypal.api.payments.Details;
+import com.paypal.api.payments.ItemList;
+import com.paypal.api.payments.Payer;
+import com.paypal.api.payments.PayerInfo;
+import com.paypal.api.payments.RedirectUrls;
+import com.webbanmatkinh.dto.BillDTO;
+import com.paypal.api.payments.Transaction;
+
+@Service
+public class PaymentService {
+	private static final String CLIENT_ID = "";
+	private static final String CLIENT_SECRET = "";
+	private static final String MODE = "sandbox";
+	
+	public String authorizePayment(BillDTO bill) {
+		Payer payer = getPayerInformation();
+		RedirectUrls redirectUrls = getRedirectUrls();
+		return null;
+	}
+	
+	private RedirectUrls getRedirectUrls() {
+		RedirectUrls redirectUrls = new RedirectUrls();
+		redirectUrls.setCancelUrl("http://localhost/PayPalTest/cancel.html");
+		redirectUrls.setReturnUrl("http://localhost/PayPalTest/review_payment");
+		return redirectUrls;
+	} 
+	
+	private List<Transaction> getTransactionInformation(BillDTO bill){
+		Details details  = new Details();
+		details.setShipping(bill.getShipping());
+		details.setSubtotal(bill.getSubtotal());
+		details.setTax(bill.getTax());
+		
+		Amount amount = new Amount();
+		amount.setCurrency("USD");
+		amount.setTotal(bill.getTotal());
+		amount.setDetails(details);
+		
+		Transaction transaction = new Transaction();
+		transaction.setAmount(amount);
+		
+		ItemList itemList = new ItemList();
+		
+		return null;
+	}
+	
+	private Payer getPayerInformation() {
+		Payer payer = new Payer();
+		payer.setPaymentMethod("pappal");
+		PayerInfo payerInfo = new PayerInfo();
+		payerInfo.setFirstName("")
+		.setLastName("")
+		.setEmail("");
+		payer.setPayerInfo(payerInfo);
+		return payer;
+	}
+}

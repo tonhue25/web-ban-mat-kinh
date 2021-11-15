@@ -1,0 +1,70 @@
+package com.webbanmatkinh.controller.web;
+
+
+
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.webbanmatkinh.dto.CartDTO;
+import com.webbanmatkinh.dto.ProductCartDTO;
+import com.webbanmatkinh.service.ICartService;
+import com.webbanmatkinh.service.IProductCartService;
+import com.webbanmatkinh.service.IUserService;
+import com.webbanmatkinh.util.SecurityUtils;
+
+@Controller(value = "productCartController")
+public class ProductCartController {
+	// tim duoc gio hang,san pham,so luong (mac dinh la 1), tong tien
+	@Autowired
+	private ICartService cartService;
+	
+	@Autowired
+	private IUserService userService;
+	
+	@Autowired
+	private IProductCartService productCartService;
+	
+	@RequestMapping(value = "/them-gio-hang/{id}", method = RequestMethod.GET)
+	public String addCart(@PathVariable(value = "id") long id,HttpSession session,
+			HttpServletRequest request) {
+		HashMap<Long,ProductCartDTO> cart = (HashMap<Long,ProductCartDTO>)session.getAttribute("Cart");
+		if(cart == null) {
+			cart = new HashMap<Long,ProductCartDTO>();
+		}
+		Long userId = userService.getUserIdByUsername(SecurityUtils.getPrincipal().getUsername());
+		Long cartId = cartService.getCartIdByUserId(userId);
+		
+		// cai nay de thong bao la them san pham thanh cong hay chua
+		ProductCartDTO productCart = productCartService.insert(id, cartId);
+		cart = productCartService.getCart(cartId);
+		session.setAttribute("totalQuantityCart", productCartService.totalQuantity(cartId));
+		session.setAttribute("totalPriceCart", productCartService.totalPrice(cartId));
+		session.setAttribute("Cart", cart);
+		return "redirect:"+request.getHeader("Referer");
+	}
+	
+	// lm chuc nang xoa
+	@RequestMapping(value = "/xoa-gio-hang/{id}", method = RequestMethod.GET)
+	public String deteteCart(HttpServletRequest request,
+			HttpSession session,@PathVariable(value = "id") long id) {
+		HashMap<Long,ProductCartDTO> cart = (HashMap<Long,ProductCartDTO>)session.getAttribute("Cart");
+		if(cart == null) {
+			cart = new HashMap<Long,ProductCartDTO>();
+		}
+		Long userId = userService.getUserIdByUsername(SecurityUtils.getPrincipal().getUsername());
+		Long cartId = cartService.getCartIdByUserId(userId);
+		
+		session.setAttribute("totalQuantityCart", productCartService.totalQuantity(cartId));
+		session.setAttribute("totalPriceCart", productCartService.totalPrice(cartId));
+		session.setAttribute("Cart", cart);
+		return "redirect:"+request.getHeader("Referer");
+	}
+}

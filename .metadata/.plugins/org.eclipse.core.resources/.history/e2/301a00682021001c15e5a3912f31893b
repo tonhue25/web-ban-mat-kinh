@@ -1,0 +1,176 @@
+package com.webbanmatkinh.service.impl;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.webbanmatkinh.converter.CartConverter;
+import com.webbanmatkinh.converter.ProductCartConverter;
+import com.webbanmatkinh.converter.ProductConverter;
+import com.webbanmatkinh.dto.CartDTO;
+import com.webbanmatkinh.dto.ProductCartDTO;
+import com.webbanmatkinh.dto.ProductDTO;
+import com.webbanmatkinh.entity.CartEntity;
+import com.webbanmatkinh.entity.ProductCartEntity;
+import com.webbanmatkinh.entity.ProductEntity;
+import com.webbanmatkinh.repository.CartRepository;
+import com.webbanmatkinh.repository.ProductCartRepository;
+import com.webbanmatkinh.repository.ProductRepository;
+import com.webbanmatkinh.service.ICartService;
+import com.webbanmatkinh.service.IProductCartService;
+import com.webbanmatkinh.service.IUserService;
+import com.webbanmatkinh.util.SecurityUtils;
+
+@Service
+public class ProductCartService implements IProductCartService{
+
+	@Autowired
+	private ProductCartRepository productCartRepository;
+	
+	@Autowired
+	private ProductCartConverter productCartConverter;
+	
+	@Autowired
+	private ProductRepository productRepository;
+	
+	@Autowired
+	private CartRepository cartRepository;
+	
+	
+	@Autowired
+	private IUserService userService;
+	
+	@Autowired
+	private ICartService cartService;
+	
+	@Autowired
+	private CartConverter cartConverter;
+	
+	@Autowired
+	private ProductConverter productConverter;
+
+	@Override
+	public List<ProductCartDTO> findAll() {
+		List<ProductCartDTO> models = new ArrayList<>();
+		List<ProductCartEntity> entities = productCartRepository.findAll();
+		for(ProductCartEntity item : entities) {
+			ProductCartDTO productCartDTO = productCartConverter.toDto(item);
+			models.add(productCartDTO);
+		}
+		return models;
+	}
+	@Override
+	public int productIdInCart(Long productId) {
+		List<ProductCartEntity> entities = productCartRepository.findAll();
+		for(ProductCartEntity item : entities) {
+			if(item.getProduct().getId() == productId) {
+				return 1;
+			}
+		}
+		return 0;
+	}
+	
+	@Override
+	@Transactional
+	public ProductCartDTO insert(Long productId , Long cartId) {
+		ProductEntity productEntity = productRepository.findOne(productId);
+		CartEntity cartEntity = cartRepository.findOne(cartId);
+		
+		ProductCartEntity productCartEntity = new ProductCartEntity();
+		
+		if(productIdInCart(productId) == 1) {
+			 productCartEntity = productCartRepository.findOne(productId);
+			 productCartEntity.setCart(cartEntity);
+			 productCartEntity.setProduct(productEntity);
+			 productCartEntity.setQuantity(productCartEntity.getQuantity()+1);
+		}
+		else {
+			productCartEntity.setCart(cartEntity);
+			productCartEntity.setProduct(productEntity);
+			productCartEntity.setQuantity(1);
+		}
+		cartEntity.addProductCart(productCartEntity);
+		productCartEntity = productCartRepository.save(productCartEntity);
+		cartEntity = cartRepository.save(cartEntity);
+		return productCartConverter.toDto(productCartEntity);
+	}
+	
+	@Override
+	public HashMap<Long, ProductCartDTO> addCart(long id, HashMap<Long, ProductCartDTO> cart) {
+		ProductCartDTO itemCart = new ProductCartDTO();
+		// id cua san pham, lay duoc san pham
+		ProductEntity productEntity = productRepository.findOne(id);
+		ProductDTO productDTO = productConverter.toDto(productEntity);
+		
+		Long userId = userService.getUserIdByUsername(SecurityUtils.getPrincipal().getUsername());
+		Long cartId = cartService.getCartIdByUserId(userId); 
+		CartEntity cartEntity = cartRepository.findOne(cartId);
+		CartDTO cartDTO = cartConverter.toDto(cartEntity);
+		
+		if(productDTO!=null && cart.containsKey(id)) {
+			itemCart = cart.get(id);
+			itemCart.setQuantity(itemCart.getQuantity()+1);
+			itemCart.setTotalPrice(itemCart.getQuantity() * itemCart.getProduct().getSalePrice());
+			itemCart.setCart(cartDTO);
+			itemCart.setProduct(productDTO);
+		}
+		else {
+			itemCart.setProduct(productDTO);
+			itemCart.setCart(cartDTO);
+			itemCart.setQuantity(1);
+			itemCart.setTotalPrice(productDTO.getSalePrice());
+		}
+		cart.put(id,itemCart);
+		return cart;
+	}
+
+	@Override
+	@Transactional
+	public ProductCartDTO update(ProductCartDTO dto, Long productId) {
+		ProductCartEntity old = productCartRepository.findOne(dto.getId());
+		ProductCartEntity update = productCartConverter.toEntity(dto);
+		update.setProduct(productRepository.findOne(productId));
+		return productCartConverter.toDto(productCartRepository.save(old));
+	}
+	
+	@Override
+	@Transactional
+	public void delete(long[] ids) {
+		for(long id:ids) {
+			productCartRepository.delete(id);
+		}
+	}
+	
+	// them tung cai vo duoc r a
+	// tinh tong so san pham cua gio hang
+	@Override
+	public int totalQuantity(Long cartid) {
+		int total = 0;
+		List<ProductCartEntity> entities = productCartRepository.findAll();
+		for(ProductCartEntity item : entities) {
+			if(item.getCart().getId() == cartid) {
+				total++;
+			}
+		}
+		return total;
+	}
+
+	@Override
+	public double totalPrice(Long cartid) {
+		int total = 0;
+		List<ProductCartEntity> entities = productCartRepository.findAll();
+		for(ProductCartEntity item : entities) {
+			if(item.getCart().getId() == cartid) {
+				total += item.getProduct().getPrice();
+			}
+		}
+		return total;
+	}
+
+
+	
+}

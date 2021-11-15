@@ -1,0 +1,69 @@
+package com.webbanmatkinh.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "bill")
+public class BillEntity extends BaseEntity{
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_id")
+	private UserEntity user;
+	
+	@Column(name = "total")
+	private double total;
+	
+	@Column(name = "status")
+	private String status;
+	
+	@Column(name = "paymentmethod")
+	private String paymentmethod;
+	
+	@Column(name = "subtotal")
+	private float subtotal;
+	
+	@Column(name = "tax")
+	private float tax;
+	
+	@Column(name = "shipping")
+	private float shipping;
+	
+	public String getPaymentmethod() {
+		return paymentmethod;
+	}
+
+	public void setPaymentmethod(String paymentmethod) {
+		this.paymentmethod = paymentmethod;
+	}
+
+	public UserEntity getUser() {
+		return user;
+	}
+
+	public void setUser(UserEntity user) {
+		this.user = user;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	
+}

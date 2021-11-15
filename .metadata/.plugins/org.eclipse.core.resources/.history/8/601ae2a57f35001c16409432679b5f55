@@ -1,0 +1,69 @@
+package com.webbanmatkinh.dto;
+
+public class BillDTO  extends AbstractDTO<BillDTO>{
+	private Long userId;
+	// tong tien = sub + tax + shipping
+	private double total;
+	// tinh trang : huy, thanh cong
+	private String status;
+	// phuong phap thanh toan
+	private String paymentmethod;
+	
+	// them vao
+	private float subtotal;
+	private float tax;
+	private float shipping;
+	
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public double getTotal() {
+		return total;
+	}
+	public void setTotal(double total) {
+		this.total = total;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getPaymentmethod() {
+		return paymentmethod;
+	}
+	public void setPaymentmethod(String paymentmethod) {
+		this.paymentmethod = paymentmethod;
+	}
+	public BillDTO(Long userId, double total, String status, String paymentmethod) {
+		super();
+		this.userId = userId;
+		this.total = total;
+		this.status = status;
+		this.paymentmethod = paymentmethod;
+	}
+	public BillDTO() {
+		super();
+	}
+	public float getShipping() {
+		return shipping;
+	}
+	public void setShipping(float shipping) {
+		this.shipping = shipping;
+	}
+	public float getTax() {
+		return tax;
+	}
+	public void setTax(float tax) {
+		this.tax = tax;
+	}
+	public float getSubtotal() {
+		return subtotal;
+	}
+	public void setSubtotal(float subtotal) {
+		this.subtotal = subtotal;
+	}
+}

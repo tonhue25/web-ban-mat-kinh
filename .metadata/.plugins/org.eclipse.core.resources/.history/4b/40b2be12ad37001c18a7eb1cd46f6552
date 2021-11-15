@@ -1,0 +1,129 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<main>
+	<section class="cart_area section_padding">
+		<div class="container">
+			<div class="cart_inner">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Product</th>
+								<th scope="col">Price</th>
+								<th scope="col">Promotion Price</th>
+								<th scope="col">Quantity</th>
+								<th scope="col">Total</th>
+								<th scope="col">Remove</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach var="item" items="${Cart}">
+								<tr>
+									<td>
+										<div class="media">
+											<div class="d-flex">
+												<a href="<c:url value='/chi-tiet-san-pham/${item.key}'/>">
+													<img
+													src="<c:url value='/template/image/${item.value.product.image}'/>"
+													alt="" />
+											</div>
+											<div class="media-body">
+												<p>
+												<h5>${item.value.product.name}</h5>
+												</p>
+											</div>
+										</div>
+									</td>
+									<td>
+										<h5>
+											<frm:formatNumber type="currency">$${item.value.product.price}</frm:formatNumber>
+										</h5>
+									</td>
+									<td>
+										<h5>
+											<frm:formatNumber type="currency">$${item.value.product.salePrice}</frm:formatNumber>
+										</h5>
+									</td>
+									<td>
+										<div class="product_count">
+											<button class="btn-danger editQuantityCart"
+												data-id="${item.key}">
+												<i class="ti-minus"></i>
+											</button>
+											<input class="input-number" type="text"
+												id="quantity-cart-${item.key}"
+												value="${item.value.quantity}">
+											<button class="btn-danger editQuantityCart"
+												data-id="${item.key}">
+												<i class="ti-plus"></i>
+											</button>
+										</div>
+									</td>
+									<td>
+										<h4>
+											<frm:formatNumber type="currency">$${item.value.product.salePrice*item.value.quantity}</frm:formatNumber>
+										</h4>
+									</td>
+									<td>
+										<button class="btn-danger" onclick="remove()" data-id="${item.id}">
+											<a href="<c:url value='/xoa-gio-hang/${item.key}'/>"
+											<i class="ti-trash"></i>
+											</a>
+										</button>
+									</td>
+								</tr>
+							</c:forEach>
+							<tr>
+								<td><a class="btn_1" href="<c:url value='/cart'/>">Update Details</a></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>
+									<h4>Subtotal</h4>
+								</td>
+								<td>
+									<h4>
+										<frm:formatNumber type="currency">$${totalPriceCart}</frm:formatNumber>
+									</h4>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="checkout_btn_inner float-right">
+						<a class="btn_1" href="<c:url value='/trang-chu'/>">Continue
+							Shopping</a> <a class="btn_1 checkout_btn_1"
+							href="<c:url value='/dat-hang'/>">Proceed to checkout</a>
+					</div>
+				</div>
+			</div>
+	</section>
+	
+	</main>
+	<content tag="script"> <script type="text/javascript">
+		$(".editQuantityCart").click(function() {
+			var id = $(this).data("id");
+			var quantity = $("#quantity-cart-" + id).val();
+			$.ajax({
+				url : "sua-gio-hang/" + id + "/" + quantity,
+				type : 'GET',
+				contentType : 'application/json',
+				data : {
+					id : id,
+					quantity : quantity
+				},
+				success : handleData
+			});
+		});
+		function handleData() {
+		}
+	</script> </content>
+</body>
+</html>

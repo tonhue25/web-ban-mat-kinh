@@ -1,0 +1,134 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+</head>
+<body>
+	<!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="<c:url value='/template/web/assets/img/logo/logo.png'/>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <main>
+        <!-- Hero Area Start-->
+        <div class="slider-area ">
+            <div class="single-slider slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap text-center">
+                                <h2>Watch Shop</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Area End-->
+        <!-- Latest Products Start -->
+        <form action="<c:url value='/san-pham/danh-sach'/>" id="formSubmit" method="get">
+        <section class="popular-items latest-padding">      
+            <div class="container">
+                <div class="row product-btn justify-content-between mb-40">
+                    <div class="properties__button">
+                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                         <form action="<c:url value='/san-pham/${item.key}?page=1&limit=6'/>" id="formSubmit" method="get">		
+                         	<a class="nav-item nav-link" href="<c:url value='/san-pham/danh-sach?page=1&limit=6'/>">All products</a>					
+                            <a class="nav-item nav-link" href="<c:url value='/san-pham/new-products?page=1&limit=6'/>">New products</a>
+                            <a class="nav-item nav-link" href="<c:url value='/san-pham/hot-products?page=1&limit=6'/>">Hot products</a>
+                            <c:forEach var="item" items="${categories}">
+                            	<a class="nav-item nav-link" href="<c:url value='/san-pham/${item.key}?page=1&limit=6'/>">${item.value}</a>
+                            </c:forEach>                         
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nav Card -->
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- card one -->
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="row">
+                        <c:forEach var="item" items="${products.listResult}">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                                <div class="single-popular-items mb-50 text-center">
+                                    <div class="popular-img">
+                                        <a href="<c:url value='/chi-tiet-san-pham/${item.id}'/>"> <img src="<c:url value='/template/image/${item.image}'/>" alt=""></a>
+                                        <div class="img-cap">
+                                            <!-- <span>Add to cart</span> -->
+                                        	<security:authorize access = "isAuthenticated()">
+												<a class="btn btn-outline-danger" href="<c:url value='/them-gio-hang/${item.id}'/>"><i
+														class="fa fa-shopping-cart"></i>Add to Cart</a> 
+											</security:authorize>	
+											<security:authorize access = "isAnonymous()">
+              									<a class="btn btn-outline-danger" href="<c:url value='/dang-nhap'/>"><i
+														class="fa fa-shopping-cart"></i>Add to Cart</a> 
+											</security:authorize>	
+										</div>
+                                        <div class="favorit-items">
+                                            <span class="flaticon-heart"></span>
+                                        </div>
+                                    </div>
+                                    <div class="popular-caption">
+                                        <h3><a href="product_details.html">${item.name}</a></h3>
+                                        <frm:formatNumber type = "currency">${item.salePrice}</frm:formatNumber>
+                                    </div>
+                                </div>
+                            </div>
+                            </c:forEach>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4"></div>
+                     <div class="col-lg-6 col-md-6">
+            			<nav aria-label="Page navigation">
+							<ul class="pagination" id="pagination"></ul>
+							<input type="hidden" value="" id="page" name="page" /> 
+							<input type="hidden" value="" id="limit" name="limit" />
+						</nav> 
+					</div>
+				 	<div class="col-lg-2 col-md-2"></div>
+				</div>				
+			</div>	
+			
+        </section> 
+        </form>          
+    </main> 
+      
+    <content tag="script">
+    <script>
+	var totalPages  = ${products.totalPage};
+	var currentPage = ${products.page};
+	$(function () {
+        window.pagObj = $('#pagination').twbsPagination({
+            totalPages: totalPages,
+            visiblePages: 5,
+            startPage : currentPage, 
+            onPageClick: function (event, page) {
+            	if (currentPage != page) {
+					$('#limit').val(6);
+					$('#page').val(page);
+					$('#formSubmit').submit();
+				}
+            }
+        });
+    });
+	</script>
+	</content>
+
+</body>
+</html>

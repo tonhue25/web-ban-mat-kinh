@@ -1,0 +1,93 @@
+package com.webbanmatkinh.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.paypal.api.payments.Amount;
+import com.paypal.api.payments.Details;
+import com.paypal.api.payments.Item;
+import com.paypal.api.payments.ItemList;
+import com.paypal.api.payments.Payer;
+import com.paypal.api.payments.PayerInfo;
+import com.paypal.api.payments.Payment;
+import com.paypal.api.payments.RedirectUrls;
+import com.webbanmatkinh.dto.BillDTO;
+import com.paypal.api.payments.Transaction;
+import com.paypal.base.rest.APIContext;
+import com.paypal.base.rest.PayPalRESTException;
+
+@Service
+public class PaymentService {
+	private static final String CLIENT_ID = "";
+	private static final String CLIENT_SECRET = "";
+	private static final String MODE = "sandbox";
+	
+	public String authorizePayment(BillDTO bill) throws PayPalRESTException {
+		Payer payer = getPayerInformation();
+		RedirectUrls redirectUrls = getRedirectUrls();
+		List<Transaction> listTransaction = getTransactionInformation(bill);
+		Payment requestPayment = new Payment();
+		requestPayment.setTransactions(listTransaction)
+		.setRedirectUrls(redirectUrls)
+		.setPayer(payer)
+		.setIntent("authorize");
+		
+		APIContext apiContext = new APIContext(CLIENT_ID,CLIENT_SECRET,MODE);
+		Payment approvedPayment = requestPayment.create(apiContext);
+		
+		return null;
+	}
+	
+	private String getApprovalLink() {
+		
+	}
+	
+	private RedirectUrls getRedirectUrls() {
+		RedirectUrls redirectUrls = new RedirectUrls();
+		redirectUrls.setCancelUrl("http://localhost/PayPalTest/cancel.html");
+		redirectUrls.setReturnUrl("http://localhost/PayPalTest/review_payment");
+		return redirectUrls;
+	} 
+	
+	private List<Transaction> getTransactionInformation(BillDTO bill){
+		Details details  = new Details();
+		details.setShipping(bill.getShipping());
+		details.setSubtotal(bill.getSubtotal());
+		details.setTax(bill.getTax());
+		
+		Amount amount = new Amount();
+		amount.setCurrency("USD");
+		amount.setTotal(bill.getTotal());
+		amount.setDetails(details);
+		
+		Transaction transaction = new Transaction();
+		transaction.setAmount(amount);
+		
+		ItemList itemList = new ItemList();
+		List<Item> items = new ArrayList<Item>();
+		Item item = new Item();
+		item.setCurrency("USD").setPrice(bill.getSubtotal())
+		.setTax(bill.getTax()).setQuantity("1");
+		items.add(item);
+		itemList.setItems(items);
+		transaction.setItemList(itemList);
+		
+		List<Transaction> listTransaction = new ArrayList<Transaction>();
+		listTransaction.add(transaction);
+		
+		return listTransaction;
+	}
+	
+	private Payer getPayerInformation() {
+		Payer payer = new Payer();
+		payer.setPaymentMethod("pappal");
+		PayerInfo payerInfo = new PayerInfo();
+		payerInfo.setFirstName("")
+		.setLastName("")
+		.setEmail("");
+		payer.setPayerInfo(payerInfo);
+		return payer;
+	}
+}

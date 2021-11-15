@@ -1,0 +1,77 @@
+1632049224344	Move 'carousel.jsp' to 'web'
+1632050742336	Delete element
+1632050875004	Delete element
+1632053019313	Delete element
+1632053045840	Delete element
+1632059191710	Delete element
+1632060583401	Copy compilation unit
+1632060797119	Delete element
+1632061143792	Delete element
+1632063097487	Delete element
+1632143402418	Delete element
+1632144616414	Rename type 'Image'
+1632153766589	Encapsulate field 'file'
+1632153819107	Encapsulate field 'imageId'
+1632154223322	Rename type 'ImageService'
+1632194153464	Delete element
+1632194342518	Delete element
+1632198916583	Delete element
+1632200047384	Move 'web' to 'template'
+1632201186485	Delete element
+1632202670148	Delete element
+1632217234472	Rename type 'SlideEntity'
+1632218324969	Move 'slide_01.jpg' to 'slider'
+1632218344222	Copy files
+1632218352574	Delete element
+1632218356507	Delete element
+1632218360417	Delete element
+1632218364148	Delete element
+1632219789110	Delete element
+1632240488784	Delete element
+1632242994344	Move 'contact.jsp' to 'web'
+1632316177589	Delete element
+1632316201648	Rename resource 'product_detail'
+1632317669502	Delete element
+1632326226513	Rename type 'CategoryController'
+1632326532991	Delete element
+1632357850050	Delete element
+1632358110848	Delete element
+1632358119169	Delete element
+1632358123934	Delete element
+1632361809139	Delete element
+1632361818228	Delete element
+1632361822397	Delete element
+1632364301649	Copy folder
+1632364389662	Delete element
+1632364947425	Delete element
+1632388412431	Rename resource 'product_detail.jsp'
+1632389380505	Delete element
+1632389397768	Delete element
+1632463986388	Delete element
+1632463991146	Delete element
+1632464548327	Delete element
+1632466953769	Delete element
+1632466957727	Delete element
+1632466961495	Delete element
+1632468174258	Delete element
+1632468179984	Delete element
+1632468184199	Delete element
+1632468189003	Delete element
+1632470382389	Rename type 'ProductDetailController'
+1632477078359	Move 'contact.jsp' to 'web1'
+1632477083046	Move 'home.jsp' to 'web1'
+1632477088116	Move 'product.jsp' to 'web1'
+1632477364856	Move 'contact.jsp' to 'web'
+1632477367037	Move 'home.jsp' to 'web'
+1632477369163	Move 'product.jsp' to 'web'
+1632477375962	Delete element
+1632478868392	Delete element
+1632495847409	Delete element
+1632557498381	Copy compilation unit
+1632578807049	Copy compilation unit
+1632588081265	Rename type 'AcountService'
+1632588785582	Rename type 'IAccountService'
+1632588797933	Rename type 'AccountService'
+1632588816928	Delete element
+1632591222087	Delete element
+1632592617779	Encapsulate field 'roleid'

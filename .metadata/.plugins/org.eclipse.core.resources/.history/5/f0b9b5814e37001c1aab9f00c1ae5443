@@ -1,0 +1,71 @@
+package com.webbanmatkinh.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.webbanmatkinh.converter.UserConverter;
+import com.webbanmatkinh.dto.UserDTO;
+import com.webbanmatkinh.entity.ProductEntity;
+import com.webbanmatkinh.entity.UserEntity;
+import com.webbanmatkinh.repository.UserRepository;
+import com.webbanmatkinh.service.IUserService;
+@Service
+public class UserService implements IUserService{
+
+	@Autowired
+	private UserConverter userConverter;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+	BCryptPasswordEncoder passwordEncoder;
+	
+	@Override
+	@Transactional
+	public UserDTO insert(UserDTO dto) {
+		UserEntity userEntity =  userConverter.toEntity(dto);
+		// chuyen ve dang BCryptPasswordEncoder roi moi luu xg db
+		userEntity.setPassword(passwordEncoder.encode(dto.getPassword()));
+		/*userEntity.setReset_password(passwordEncoder.encode(dto.getPassword()));*/
+		userEntity = userRepository.save(userEntity);
+		return userConverter.toDto(userEntity);
+	}
+	
+	// update ma ko update pass
+	/*@Override
+	@Transactional
+	public UserDTO update(UserDTO dto,UserEntity old) {
+		UserEntity update =  userConverter.toEntity(old, dto);		
+		update = userRepository.save(update);
+		return userConverter.toDto(update);
+	}
+	*/
+	@Override
+	public UserEntity findOneByUserNameAndStatus(String username, int status) {
+		return userRepository.findOneByUserNameAndStatus(username, status);
+	}
+
+	@Override
+	public UserEntity findOne(Long id) {
+		return userRepository.findOne(id);
+	}
+
+	@Override
+	public List<UserEntity> findByRole(Long roleid) {
+		return userRepository.findByRole(roleid);
+	}
+	
+	@Override
+	public void deleteByRole(Long roleid) {
+		List<UserEntity> entities = findByRole(roleid);
+		for(UserEntity item : entities) {
+			userRepository.delete(item);
+		}
+	}
+	
+}

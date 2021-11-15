@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="Custom Checkbox" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Custom Checkbox"/>
+			<item value="Help text"/>
+			<item value="Custom Radio"/>
+			<item value="horizontal Basic Forms"/>
+			<item value="Textarea"/>
+			<item value="Example file input"/>
+			<item value="Input Validation"/>
+			<item value="source code"/>
+			<item value="code"/>
+			<item value="Color"/>
+			<item value="click here"/>
+			<item value="2018"/>
+			<item value="Data Table with Checckbox select"/>
+			<item value="Data Table with Export Buttons"/>
+			<item value="copy"/>
+		</list>
+		<list key="replacehistory">
+			<item value="getSalePrice"/>
+			<item value="&lt;c:url value=&apos;/template/item/img/"/>
+			<item value="&lt;c:url value=&apos;/template/item/js/"/>
+			<item value="&lt;c:url value=&apos;/template/item/lib/"/>
+			<item value="/template/"/>
+			<item value="&lt;c:url value=&apos;template/item/assets/"/>
+			<item value="template/product"/>
+			<item value="template"/>
+			<item value="&lt;c:url value=&apos;template/product_detail/assets"/>
+			<item value="&lt;c:url value=&apos;template/poduct_detail/assets/"/>
+			<item value="&lt;c:url value=&apos;template/poduct_detail/assets"/>
+			<item value="&lt;c:url value=&apos;template/poduct_detail"/>
+			<item value="&lt;c:url value=&apos;template/product_detail"/>
+			<item value="span3"/>
+			<item value="span4"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="754" key="DIALOG_X_ORIGIN"/>
+		<item value="119" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

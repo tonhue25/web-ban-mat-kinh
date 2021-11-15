@@ -1,0 +1,42 @@
+package com.webbanmatkinh.controller.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.webbanmatkinh.dto.UserDTO;
+import com.webbanmatkinh.service.ICartService;
+import com.webbanmatkinh.service.IUserService;
+
+@Controller
+public class UserController {
+
+	@Autowired
+	private IUserService userService;
+	
+	@Autowired
+	private ICartService cartService;
+	
+	@RequestMapping(value = "/dang-ki", method = RequestMethod.GET)
+	public ModelAndView register() {
+		ModelAndView mav = new ModelAndView("register");
+		mav.addObject("user", new UserDTO());
+		return mav;
+	}
+
+	@RequestMapping(value = "/dang-ki", method = RequestMethod.POST)
+	public ModelAndView createAccount(@ModelAttribute("user") UserDTO user) {
+		ModelAndView mav = new ModelAndView("register");
+		UserDTO userDTO = userService.insert(user);
+		// dang ki thanh cong thi khac null va redirect ve trang chu
+		if (userDTO != null) {
+			mav.addObject("statusUser", "ĐĂNG KÍ THÀNH CÔNG");
+			cartService.insert(userDTO.getId());
+			return new ModelAndView("redirect:/trang-chu");
+		}
+		return mav;
+	}
+}

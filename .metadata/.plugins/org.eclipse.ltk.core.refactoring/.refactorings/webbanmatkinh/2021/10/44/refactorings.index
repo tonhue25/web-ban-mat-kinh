@@ -1,0 +1,37 @@
+1635039835411	Delete element
+1635044716288	Delete element
+1635068356902	Delete element
+1635085314381	Pull up members to 'IProductService'
+1635157472230	Encapsulate field 'shipping'
+1635157490043	Encapsulate field 'tax'
+1635157498709	Encapsulate field 'subtotal'
+1635163638909	Delete element
+1635164018069	Delete element
+1635165734384	Delete element
+1635371338560	Pull up members to 'IProductCartService'
+1635411492835	Delete element
+1635411575009	Delete element
+1635411596493	Delete element
+1635411923062	Delete element
+1635411967280	Delete element
+1635411981270	Delete element
+1635411987084	Delete element
+1635415616082	Delete element
+1635415624777	Delete element
+1635415646432	Delete element
+1635415654203	Delete element
+1635415658796	Delete element
+1635444531081	Delete element
+1635485479377	Copy file
+1635596955395	Delete element
+1635596963672	Delete element
+1635614692142	Rename resource 'admin'
+1635614739254	Rename resource 'admin'
+1635614863143	Rename resource 'admin.jsp'
+1635614879746	Rename resource 'admin'
+1635616911069	Move 'header.jsp' to 'admin'
+1635617860117	Rename resource 'home.jsp'
+1635618206106	Rename resource 'home.jsp'
+1635618214463	Rename resource 'home1.jsp'
+1635618554263	Delete element
+1635618563827	Rename resource 'a.jsp'

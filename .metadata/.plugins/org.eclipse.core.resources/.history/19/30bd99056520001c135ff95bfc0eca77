@@ -1,0 +1,45 @@
+package com.webbanmatkinh.entity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cart")
+public class CartEntity extends BaseEntity{
+	
+	@ManyToMany()
+	@JoinTable(name = "cart_product" , joinColumns = @JoinColumn(name = "cartid"),
+	inverseJoinColumns = @JoinColumn(name = "productid"))
+	private List<ProductEntity> products = new ArrayList<>();
+	
+	/*@OneToMany(mappedBy = "cart")
+    private Set<ProductCart> productCart = new HashSet<ProductCart>();
+*/
+	public List<ProductEntity> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<ProductEntity> products) {
+		this.products = products;
+	}
+	
+	@OneToOne
+    @JoinColumn(name = "userid")
+    private UserEntity userid;
+
+	public UserEntity getUserid() {
+		return userid;
+	}
+
+	public void setUserid(UserEntity userid) {
+		this.userid = userid;
+	}
+	
+}

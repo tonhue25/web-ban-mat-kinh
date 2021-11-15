@@ -1,0 +1,219 @@
+
+thg 9 13, 2021 15:52:32.87 NEW SESSION
+thg 9 13, 2021 15:52:32.98 [14508:9224:0913/155232.411:ERROR:process_singleton_win.cc(411)] Lock file can not be created! Error code: 32
+thg 9 13, 2021 15:52:32.98 [14508:9224:0913/155232.411:ERROR:chrome_browser_main.cc(1287)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+
+thg 9 20, 2021 24:11:18.71 NEW SESSION
+thg 9 20, 2021 24:11:18.74 [13652:4000:0920/001118.597:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 20, 2021 24:11:51.16 [13652:4000:0920/001151.161:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+thg 9 20, 2021 24:11:56.91 [13652:4000:0920/001156.915:ERROR:device_event_log_impl.cc(214)] [00:11:56.916] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 20, 2021 24:11:56.91 [13652:4000:0920/001156.916:ERROR:device_event_log_impl.cc(214)] [00:11:56.917] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 20, 2021 24:12:00.35 [13652:13452:0920/001200.352:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 9 20, 2021 24:19:45.47 [13652:4000:0920/001945.471:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+
+thg 9 23, 2021 14:38:09.48 NEW SESSION
+thg 9 23, 2021 14:38:09.52 [10428:12220:0923/143809.151:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 23, 2021 14:38:18.64 [10428:12220:0923/143818.648:ERROR:device_event_log_impl.cc(214)] [14:38:18.649] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 14:38:18.64 [10428:12220:0923/143818.649:ERROR:device_event_log_impl.cc(214)] [14:38:18.649] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 14:38:20.09 [10428:12220:0923/143820.096:ERROR:device_event_log_impl.cc(214)] [14:38:20.096] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+thg 9 23, 2021 14:38:28.64 [10428:11164:0923/143828.640:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:38:45.36 [10428:10912:0923/143845.367:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 9 23, 2021 14:42:37.84 [10428:11164:0923/144237.849:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:42:59.10 [10428:11164:0923/144259.101:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:43:53.42 [10428:11164:0923/144353.421:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:44:59.15 [10428:12220:0923/144459.154:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 23, 2021 14:46:12.24 [3904:10644:0923/144612.246:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 23, 2021 14:46:16.68 [3904:10644:0923/144616.682:ERROR:device_event_log_impl.cc(214)] [14:46:16.681] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 14:46:16.68 [3904:10644:0923/144616.682:ERROR:device_event_log_impl.cc(214)] [14:46:16.682] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 14:46:18.84 [3904:2400:0923/144618.842:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:46:41.81 [3904:2400:0923/144641.813:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:47:40.92 [3904:2400:0923/144740.922:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:49:31.25 [3904:2400:0923/144931.256:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:53:20.28 [3904:2400:0923/145320.281:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 14:59:11.68 [3904:2400:0923/145911.679:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:09:11.69 [3904:2400:0923/150911.695:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:11:37.27 [3904:10644:0923/151137.276:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 23, 2021 15:12:36.43 [12216:9404:0923/151236.438:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 23, 2021 15:12:40.86 [12216:9404:0923/151240.861:ERROR:device_event_log_impl.cc(214)] [15:12:40.861] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 15:12:40.86 [12216:9404:0923/151240.862:ERROR:device_event_log_impl.cc(214)] [15:12:40.861] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 15:12:40.86 [12216:9404:0923/151240.862:ERROR:device_event_log_impl.cc(214)] [15:12:40.862] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 23, 2021 15:12:42.05 [12216:8836:0923/151242.057:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:13:09.80 [12216:8836:0923/151309.803:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:13:54.19 [12216:8836:0923/151354.198:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:15:27.96 [12216:8836:0923/151527.966:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:19:01.77 [12216:8836:0923/151901.779:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:25:04.23 [12216:8836:0923/152504.231:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:25:08.35 [12216:9404:0923/152508.357:ERROR:device_event_log_impl.cc(214)] [15:25:08.357] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+thg 9 23, 2021 15:25:32.66 [12216:8836:0923/152532.664:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 15:25:57.86 [12216:7692:0923/152557.863:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 9 23, 2021 17:39:23.63 [12216:8836:0923/173921.005:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 17:39:44.28 [12216:8836:0923/173944.273:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 17:40:37.95 [12216:8836:0923/174037.958:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 17:42:13.79 [12216:8836:0923/174213.795:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:20:18.61 [12216:8836:0923/182016.736:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:22:04.34 [12216:8836:0923/182204.294:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:26:10.84 [12216:8836:0923/182610.841:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:26:52.94 [12216:8836:0923/182652.944:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:28:14.75 [12216:8836:0923/182814.755:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:31:21.54 [12216:8836:0923/183121.533:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:38:50.66 [12216:8836:0923/183850.661:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 18:48:50.67 [12216:8836:0923/184850.672:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 23, 2021 23:32:26.27 [12216:8836:0923/233226.211:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+thg 9 28, 2021 12:17:01.51 NEW SESSION
+thg 9 28, 2021 12:17:01.54 [5164:7156:0928/121701.476:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 28, 2021 12:17:08.30 [5164:7156:0928/121708.302:ERROR:device_event_log_impl.cc(214)] [12:17:08.302] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 28, 2021 12:17:08.30 [5164:7156:0928/121708.303:ERROR:device_event_log_impl.cc(214)] [12:17:08.303] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 28, 2021 12:17:12.00 [5164:11864:0928/121712.004:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+
+thg 9 28, 2021 22:02:25.48 NEW SESSION
+thg 9 28, 2021 22:02:25.51 [14516:14476:0928/220225.383:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 28, 2021 22:02:50.90 [14516:14476:0928/220250.900:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+thg 9 28, 2021 22:03:01.36 [14516:14476:0928/220301.364:ERROR:device_event_log_impl.cc(214)] [22:03:01.364] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 28, 2021 22:03:01.36 [14516:14476:0928/220301.364:ERROR:device_event_log_impl.cc(214)] [22:03:01.364] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 28, 2021 22:03:06.03 [14516:15444:0928/220306.034:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 9 28, 2021 22:22:48.31 [14516:14608:0928/222248.302:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:23:12.34 [14516:14608:0928/222312.339:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:24:08.53 [14516:14608:0928/222408.539:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:25:49.18 [14516:14608:0928/222549.181:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:28:44.21 [14516:14608:0928/222844.213:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:34:04.57 [14516:14608:0928/223404.431:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:34:08.70 [14516:14476:0928/223408.700:ERROR:device_event_log_impl.cc(214)] [22:34:08.700] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+thg 9 28, 2021 22:34:28.40 [14516:14608:0928/223428.401:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:35:21.28 [14516:14608:0928/223521.285:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:49:53.08 [14516:14608:0928/224953.088:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:50:13.91 [14516:14608:0928/225013.914:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:51:13.38 [14516:14608:0928/225113.389:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:52:15.51 [14516:14608:0928/225215.518:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:53:09.06 [14516:14608:0928/225309.060:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:53:53.91 [14516:14608:0928/225353.918:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:55:39.40 [14516:14608:0928/225539.407:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 22:59:01.15 [14516:14608:0928/225901.155:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 23:06:51.49 [14516:14608:0928/230651.495:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 28, 2021 23:11:50.93 [14516:14608:0928/231150.937:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+thg 9 30, 2021 11:23:12.02 NEW SESSION
+thg 9 30, 2021 11:23:12.06 [7348:12452:0930/112311.849:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 9 30, 2021 11:23:35.62 [7348:12452:0930/112335.626:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+thg 9 30, 2021 11:23:37.35 [7348:12452:0930/112337.351:ERROR:device_event_log_impl.cc(214)] [11:23:37.351] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 30, 2021 11:23:37.35 [7348:12452:0930/112337.352:ERROR:device_event_log_impl.cc(214)] [11:23:37.352] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 30, 2021 11:23:37.35 [7348:12452:0930/112337.352:ERROR:device_event_log_impl.cc(214)] [11:23:37.352] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 9 30, 2021 11:23:45.20 [7348:3284:0930/112345.205:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:24:06.79 [7348:3284:0930/112406.799:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:24:48.22 [7348:3284:0930/112448.228:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:26:40.49 [7348:3284:0930/112640.493:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:30:08.24 [7348:3284:0930/113008.241:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:36:03.59 [7348:3284:0930/113603.593:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:46:03.93 [7348:3284:0930/114603.926:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 11:56:03.93 [7348:3284:0930/115603.938:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 12:06:03.94 [7348:3284:0930/120603.943:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 12:16:03.95 [7348:3284:0930/121603.958:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 9 30, 2021 12:26:03.97 [7348:3284:0930/122603.975:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+thg 10 05, 2021 15:09:15.30 NEW SESSION
+thg 10 05, 2021 15:09:15.46 [10004:13668:1005/150858.218:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 10 05, 2021 15:09:58.35 [10004:13668:1005/150958.356:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+thg 10 05, 2021 15:09:59.59 [10004:13668:1005/150959.597:ERROR:device_event_log_impl.cc(214)] [15:09:59.597] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 05, 2021 15:09:59.60 [10004:13668:1005/150959.599:ERROR:device_event_log_impl.cc(214)] [15:09:59.599] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 05, 2021 15:10:10.96 [10004:5420:1005/151010.964:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 10 05, 2021 15:44:46.88 [10004:404:1005/154446.841:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 15:45:08.68 [10004:404:1005/154508.681:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 15:46:08.26 [10004:404:1005/154608.267:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 15:47:58.86 [10004:404:1005/154758.868:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 15:51:50.99 [10004:404:1005/155150.998:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 15:57:37.70 [10004:404:1005/155737.704:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 16:07:37.71 [10004:404:1005/160737.715:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 16:17:37.72 [10004:404:1005/161737.719:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 16:27:37.73 [10004:404:1005/162737.736:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 16:34:13.63 [10004:404:1005/163413.633:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 16:34:29.51 [10004:13668:1005/163429.516:ERROR:device_event_log_impl.cc(214)] [16:34:29.515] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+thg 10 05, 2021 17:07:13.66 [10004:404:1005/170711.310:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 17:07:38.11 [10004:404:1005/170738.116:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 17:35:24.31 [10004:404:1005/173523.602:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 17:35:52.40 [10004:404:1005/173552.408:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 17:36:45.89 [10004:404:1005/173645.893:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 05, 2021 17:37:29.55 [10004:404:1005/173729.552:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+
+thg 10 14, 2021 15:39:40.37 NEW SESSION
+thg 10 14, 2021 15:39:40.43 [4788:9460:1014/153940.370:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 10 14, 2021 15:40:06.00 [4788:9460:1014/154006.002:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+thg 10 14, 2021 15:40:12.60 [4788:9460:1014/154012.605:ERROR:device_event_log_impl.cc(214)] [15:40:12.605] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 14, 2021 15:40:33.96 [4788:11168:1014/154033.967:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 15:41:02.26 [4788:11168:1014/154102.262:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 15:41:30.35 [4788:11168:1014/154130.356:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 15:43:23.83 [4788:11168:1014/154323.835:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 15:46:51.73 [4788:11168:1014/154651.737:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 15:52:55.38 [4788:11168:1014/155255.385:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 16:02:55.38 [4788:11168:1014/160255.389:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 16:12:55.39 [4788:11168:1014/161255.399:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 16:22:55.40 [4788:11168:1014/162255.402:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 16:32:55.41 [4788:11168:1014/163255.417:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 16:45:59.18 [4788:12836:1014/164559.071:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 10 14, 2021 17:25:17.93 [4788:11168:1014/172515.839:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:25:40.81 [4788:11168:1014/172540.817:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:26:26.06 [4788:11168:1014/172626.061:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:39:57.41 [4788:11168:1014/173957.419:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 14, 2021 17:40:13.16 [4788:11168:1014/174013.160:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:40:19.05 [4788:9460:1014/174019.056:ERROR:device_event_log_impl.cc(214)] [17:40:18.847] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+thg 10 14, 2021 17:41:04.53 [4788:11168:1014/174104.535:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:42:43.16 [4788:11168:1014/174243.162:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:46:23.55 [4788:11168:1014/174623.556:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 17:52:59.32 [4788:11168:1014/175259.324:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 18:02:59.32 [4788:11168:1014/180259.327:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 18:12:59.33 [4788:11168:1014/181259.330:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 18:22:59.34 [4788:11168:1014/182259.341:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 18:32:59.34 [4788:11168:1014/183259.343:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 21:32:53.28 [4788:11168:1014/213252.904:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 21:33:19.50 [4788:11168:1014/213319.503:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 21:34:11.60 [4788:11168:1014/213411.584:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 21:36:07.89 [4788:11168:1014/213607.796:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 21:38:58.38 [4788:11168:1014/213858.385:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 21:46:37.65 [4788:11168:1014/214637.653:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 22:37:01.87 [4788:11168:1014/223701.046:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 14, 2021 23:28:31.10 [4788:12464:1014/232830.893:ERROR:database.cc(1674)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, date_synced, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+
+thg 10 16, 2021 07:17:09.69 NEW SESSION
+thg 10 16, 2021 07:17:09.72 [9136:8980:1016/071709.649:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 10 16, 2021 07:17:28.26 [9136:8980:1016/071728.262:ERROR:network_service_instance_impl.cc(333)] Network service crashed, restarting service.
+thg 10 16, 2021 07:17:33.51 [9136:8980:1016/071733.516:ERROR:device_event_log_impl.cc(214)] [07:17:33.515] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 16, 2021 07:17:33.51 [9136:8980:1016/071733.517:ERROR:device_event_log_impl.cc(214)] [07:17:33.516] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 16, 2021 07:17:42.85 [9136:9392:1016/071742.859:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:18:08.76 [9136:9392:1016/071808.764:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:18:53.05 [9136:9392:1016/071853.054:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:20:42.40 [9136:9392:1016/072042.409:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:24:15.96 [9136:9392:1016/072415.965:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:31:53.97 [9136:9392:1016/073153.976:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:35:25.98 [9136:9392:1016/073525.984:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 16, 2021 07:35:31.40 [9136:9392:1016/073531.409:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 16, 2021 07:37:51.43 [9136:9392:1016/073751.435:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 16, 2021 07:38:10.32 [9136:11616:1016/073810.323:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+
+thg 10 18, 2021 16:19:41.78 NEW SESSION
+thg 10 18, 2021 16:19:41.96 [9432:7444:1018/161941.557:ERROR:upgrade_util_win.cc(63)] CoCreate ProcessLauncherClass failed; hr = 800700c1
+thg 10 18, 2021 16:19:52.77 [9432:7444:1018/161952.775:ERROR:device_event_log_impl.cc(214)] [16:19:52.775] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 18, 2021 16:19:52.77 [9432:7444:1018/161952.776:ERROR:device_event_log_impl.cc(214)] [16:19:52.775] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 18, 2021 16:19:53.02 [9432:6800:1018/161953.028:ERROR:get_updates_processor.cc(257)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 10 18, 2021 18:25:42.80 [9432:2136:1018/182542.613:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 18:26:09.47 [9432:2136:1018/182609.471:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 18:26:49.99 [9432:2136:1018/182649.997:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 18:28:13.02 [9432:2136:1018/182813.027:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 18:31:45.32 [9432:2136:1018/183145.320:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 18:38:31.37 [9432:2136:1018/183831.377:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 18:48:31.38 [9432:2136:1018/184831.384:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 19:24:30.00 [9432:2136:1018/192430.003:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 10 18, 2021 19:25:03.10 [9432:7444:1018/192503.109:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+thg 10 18, 2021 19:25:04.30 [9432:7444:1018/192504.303:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Connection failed (-106).
+thg 10 18, 2021 19:31:42.42 [9432:2136:1018/193142.428:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 18, 2021 19:47:20.90 [9432:2136:1018/194720.905:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 18, 2021 19:47:41.89 [9432:2136:1018/194741.896:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 18, 2021 19:48:35.49 [9432:2136:1018/194835.497:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -105
+thg 10 18, 2021 23:33:10.37 [9432:13268:1018/233309.964:ERROR:database.cc(1674)] Passwords SQLite error: code 2067 errno 0: UNIQUE constraint failed: logins.origin_url, logins.username_element, logins.username_value, logins.password_element, logins.signon_realm sql: INSERT INTO logins (origin_url, action_url, username_element, username_value, password_element, password_value, submit_element, signon_realm, date_created, blacklisted_by_user, scheme, password_type, times_used, form_data, date_synced, display_name, icon_url, federation_url, skip_zero_click, generation_upload_status, possible_username_pairs, id, date_last_used, moving_blocked_for) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+
+thg 10 30, 2021 15:46:01.96 NEW SESSION
+thg 10 30, 2021 15:46:02.44 [11448:604:1030/154601.957:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] crbug.com/1216328: Checking Bluetooth availability started. Please report if there is no report that this ends.
+thg 10 30, 2021 15:46:02.59 [11448:604:1030/154601.957:ERROR:chrome_browser_main_extra_parts_metrics.cc(233)] crbug.com/1216328: Checking Bluetooth availability ended.
+thg 10 30, 2021 15:46:02.59 [11448:604:1030/154601.957:ERROR:chrome_browser_main_extra_parts_metrics.cc(236)] crbug.com/1216328: Checking default browser status started. Please report if there is no report that this ends.
+thg 10 30, 2021 15:46:02.60 [11448:604:1030/154601.958:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
+thg 10 30, 2021 15:46:03.65 [11448:11952:1030/154603.653:ERROR:device_event_log_impl.cc(214)] [15:46:03.653] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 30, 2021 15:46:08.78 [11448:11952:1030/154608.788:ERROR:device_event_log_impl.cc(214)] [15:46:08.789] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
+thg 10 30, 2021 15:46:22.72 [11448:7288:1030/154622.726:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 15

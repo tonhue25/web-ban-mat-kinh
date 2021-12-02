@@ -48,6 +48,7 @@ public class UserService implements IUserService{
 		return userConverter.toDto(userRepository.save(update));
 	}
 	
+
 	@Override
 	public UserEntity findOneByUserNameAndStatus(String username, int status) {
 		return userRepository.findOneByUserNameAndStatus(username, status);
@@ -70,4 +71,30 @@ public class UserService implements IUserService{
 			userRepository.delete(item);
 		}
 	}
+	
+	@Override
+	public void updateResetPassword(String token,String email) {
+		UserEntity userEntity = userRepository.findOneByEmail(email);
+		if(userEntity!=null) {
+			userEntity.setResetPasswordToken(token);
+			userRepository.save(userEntity);
+		}/*else {
+			throw new CustomerNotFoundException("Could not found any customer with email!!"+email);
+		}*/
+	}
+	
+	@Override
+	public UserEntity get(String resetPasswordToken) {
+		return userRepository.findOneByResetPasswordToken(resetPasswordToken);
+	}
+	
+	@Override
+	public void updatePassword(UserEntity user,String newPass) {
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String encodePassword = passwordEncoder.encode(newPass);
+		user.setPassword(encodePassword);
+		user.setResetPasswordToken(null);
+		userRepository.save(user);
+	}
+	
 }

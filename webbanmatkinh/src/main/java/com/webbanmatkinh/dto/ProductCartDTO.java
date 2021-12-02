@@ -8,7 +8,16 @@ public class ProductCartDTO extends AbstractDTO<ProductCartDTO>{
 	private double totalPrice;
 	// trang thai bi xoa khoi gio hang chua
 	private String status;
+	private double price;
 	
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
 	public String getStatus() {
 		return status;
 	}

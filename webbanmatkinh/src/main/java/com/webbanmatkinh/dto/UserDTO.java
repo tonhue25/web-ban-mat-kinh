@@ -9,6 +9,15 @@ public class UserDTO extends AbstractDTO<UserDTO> {
 	private String address;
 	private int status;
 	private long roleid;
+	private String resetPasswordToken;
+
+	public String getResetPasswordToken() {
+		return resetPasswordToken;
+	}
+
+	public void setResetPasswordToken(String resetPasswordToken) {
+		this.resetPasswordToken = resetPasswordToken;
+	}
 
 	public String getUserName() {
 		return userName;

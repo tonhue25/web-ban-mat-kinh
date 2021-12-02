@@ -12,23 +12,27 @@ import javax.persistence.Table;
 public class ProductCartEntity extends BaseEntity {
 
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "product_id")
+	@JoinColumn(name = "product_id" , columnDefinition = "int NOT NULL")
 	private ProductEntity product;
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "cart_id")
+	@ManyToOne(cascade = CascadeType.ALL )
+	@JoinColumn(name = "cart_id", columnDefinition = "int NOT NULL")
 	private CartEntity cart;
 
 	@Column(name = "quantity")
 	private int quantity;
 	
-	@Column(name = "status")
+	@Column(name = "price")
+	private double price;
+	
+	@Column(name = "status" , columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String status;
 	
 	public String getStatus() {
 		return status;
 	}
 
+	
 	public void setStatus(String status) {
 		this.status = status;
 	}
@@ -67,6 +71,16 @@ public class ProductCartEntity extends BaseEntity {
 
 	public ProductCartEntity() {
 		super();
+	}
+
+
+	public double getPrice() {
+		return price;
+	}
+
+
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	
 }

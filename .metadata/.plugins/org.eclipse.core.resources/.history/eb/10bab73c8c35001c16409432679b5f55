@@ -1,8 +1,0 @@
-package com.webbanmatkinh.api.admin;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController(value = "payMentAPIOfAdmin")
-public class Payment {
-
-}

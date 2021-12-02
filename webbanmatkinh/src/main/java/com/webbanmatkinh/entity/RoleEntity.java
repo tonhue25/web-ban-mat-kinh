@@ -12,10 +12,10 @@ import javax.persistence.Table;
 @Table(name = "role")
 public class RoleEntity extends BaseEntity{
 	
-	@Column(name = "name")
+	@Column(name = "name" , columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String name;
 	
-	@Column(name = "code")
+	@Column(name = "code" , columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String code;
 	
 	@OneToMany(mappedBy = "role")

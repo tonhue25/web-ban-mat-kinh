@@ -18,7 +18,7 @@ public class CartEntity extends BaseEntity{
     private Set<ProductCartEntity> productCart = new HashSet<>();
 	
 	@OneToOne
-    @JoinColumn(name = "userid")
+    @JoinColumn(name = "userid" , columnDefinition = "int NOT NULL")
     private UserEntity userid;
 	
 	public Set<ProductCartEntity> getProductCart() {

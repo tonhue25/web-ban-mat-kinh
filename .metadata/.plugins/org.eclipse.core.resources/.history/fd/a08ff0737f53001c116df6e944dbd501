@@ -1,0 +1,7 @@
+package com.webbanmatkinh.service.impl;
+
+public class RandomString {
+	public RandomString(int length) {
+        this(length, new SecureRandom());
+    }
+}

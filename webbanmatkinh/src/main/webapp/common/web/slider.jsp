@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Freshshop</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> PandaShop</strong></h1>
                             <p class="m-b-40">${item.caption} <br>${item.content}</p>
                             <p><a class="btn hvr-hover" href="<c:url value='/san-pham/danh-sach?page=1&limit=6'/>">Shop Now</a></p>
                         </div>

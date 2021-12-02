@@ -52,7 +52,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<c:url value='/san-pham/danh-sach?page=1&limit=6'/>">Products</a>
                         </li>
+                        <security:authorize access = "isAuthenticated()">
                         <li class="nav-item"><a class="nav-link" href="<c:url value='/contact'/>">Contact Us</a></li>
+                        </security:authorize>
                     </ul>
                 </div>
                 <div class="attr-nav">

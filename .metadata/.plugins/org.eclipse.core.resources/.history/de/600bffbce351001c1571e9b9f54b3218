@@ -1,0 +1,20 @@
+package com.webbanmatkinh.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.webbanmatkinh.entity.UserEntity;
+
+public interface UserRepository extends JpaRepository<UserEntity, Long> {
+	UserEntity findOneByUserNameAndStatus(String username, int status);
+
+	List<UserEntity> findByRole(Long roleid);
+
+	@Query(value = "insert into user (address, email, fullname,password,phone,status,username,roleid) values (:address, :email, :fullname, :password, :phone, , :status, :username, :roleid)", nativeQuery = true)
+	void insertUser(@Param("address") String address,@Param("email") String email,@Param("fullname") String fullname,@Param("password") String password
+			,@Param("phone") String phone, @Param("status") Integer status,@Param("username") String username, @Param("roleid") Integer roleid);
+
+}

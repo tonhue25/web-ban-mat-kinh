@@ -7,13 +7,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "slider")
 public class SliderEntity extends BaseEntity{
-	@Column(name = "image")
+	@Column(name = "image" , columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String image;
 	
-	@Column(name = "caption")
+	@Column(name = "caption" , columnDefinition = "NVARCHAR(300) NOT NULL")
 	private String caption;
 	
-	@Column(name = "content")
+	@Column(name = "content" , columnDefinition = "NVARCHAR(500) NOT NULL")
 	private String content;
 
 	public String getImage() {

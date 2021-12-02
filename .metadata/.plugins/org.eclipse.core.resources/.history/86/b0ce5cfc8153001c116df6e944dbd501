@@ -1,0 +1,11 @@
+package com.webbanmatkinh.service.impl;
+
+public class CustomerNotFoundException extends Exception {
+
+	public CustomerNotFoundException(String string) {
+		super(string);
+	}
+
+	
+
+}

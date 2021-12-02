@@ -1,0 +1,11 @@
+package com.webbanmatkinh.service.impl;
+
+public class CustomerNotFoundException extends Exception {
+
+	public CustomerNotFoundException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+}

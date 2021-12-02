@@ -1,0 +1,42 @@
+package com.webbanmatkinh.dto;
+
+public class MailDTO {
+	// người gửi, người nhận, nội dung, chủ đề
+	private String sender;
+	private String subject;
+	private String content;
+	private String mailReception;
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getMailReception() {
+		return mailReception;
+	}
+
+	public void setMailReception(String mailReception) {
+		this.mailReception = mailReception;
+	}
+
+}

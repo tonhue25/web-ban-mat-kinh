@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    <%@include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <div id = "info_success"></div>
+<content tag="script">
+    <script>
+	$(".info_success").click(function() {
+		$.ajax({
+			type : 'POST',
+			contentType : 'application/json',
+			success : addtocart 
+		});
+	});
+	
+	/* hàm này ok rồi nè */
+	function addtocart() {
+       Swal.fire({
+     	   position: 'center',
+     	   icon: 'success',
+			title: 'Đăng kí thành công!!',
+     	   showConfirmButton: false,
+     	   timer: 2500
+     	 })
+        };
+	</script>
+	</content>
+</body>
+</html>

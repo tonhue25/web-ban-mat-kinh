@@ -16,33 +16,33 @@ import javax.persistence.Table;
 @Table(name = "product")
 public class ProductEntity extends BaseEntity{
 
-	@Column(name = "name")
+	@Column(name = "name" , columnDefinition = "NVARCHAR(100) NOT NULL")
 	private String name; //
 	
 	// ben kia de the nay: @OneToMany(mappedBy = "category") => private CategoryEntity category;
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "category_id")
+	@JoinColumn(name = "category_id" , columnDefinition = "int NOT NULL")
 	private CategoryEntity category;//
 	
 	@Column(name = "price")
 	private double price;//
 	
-	@Column(name = "hotproduct")
+	@Column(name = "hotproduct", columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String hotproduct;//
 	
-	@Column(name = "newproduct")
+	@Column(name = "newproduct" , columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String newproduct;//
 	
-	@Column(name = "image")
+	@Column(name = "image" , columnDefinition = "NVARCHAR(50) NOT NULL")
 	private String image;//
 	
 	@Column(name = "sale")
 	private double sale;//
 	
-	@Column(name = "shortdescription", columnDefinition = "TEXT")
+	@Column(name = "shortdescription", columnDefinition = "NVARCHAR(500) NOT NULL")
 	private String shortDescription;//
 
-	@Column(name = "detail", columnDefinition = "TEXT")
+	@Column(name = "detail", columnDefinition = "NVARCHAR(500) NOT NULL")
 	private String detail;//
 	
 	@OneToMany(mappedBy = "product", cascade = CascadeType.MERGE)

@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <div id = "info_success"></div>
+ 
+ <content tag="script">
+    <script>
+	$(".info_success").click(function() {
+		//var id = $(this).data("id");	
+		$.ajax({
+			url : "dang-ki",
+			type : 'POST',
+			contentType : 'application/json',
+			data : {
+				id:id,
+			},
+			success : addtocart 
+		});
+	});
+	
+	/* hàm này ok rồi nè */
+	function addtocart() {
+       Swal.fire({
+     	   position: 'center',
+     	   icon: 'success',
+			title: 'Đã thêm vào giỏ hàng!!',
+     	   showConfirmButton: false,
+     	   timer: 2500
+     	 })
+        };
+	</script>
+	</content>
+</body>
+</html>

@@ -1,0 +1,7 @@
+package com.webbanmatkinh.dto;
+
+public class MailDTO {
+	private String sender;
+	private String subject;
+	private String content;
+}

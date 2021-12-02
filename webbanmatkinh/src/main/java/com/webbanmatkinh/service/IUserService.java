@@ -17,4 +17,11 @@ public interface IUserService {
 	void deleteByRole(Long roleid);
 
 	UserDTO update(UserDTO dto);
+
+	void updatePassword(UserEntity user, String newPass);
+
+	UserEntity get(String resetPasswordToken);
+
+	void updateResetPassword(String token, String email) ;
+
 }

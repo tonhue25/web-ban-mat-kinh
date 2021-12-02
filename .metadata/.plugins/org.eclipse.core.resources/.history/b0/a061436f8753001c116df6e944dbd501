@@ -1,0 +1,28 @@
+package com.webbanmatkinh.service;
+
+import java.util.List;
+
+import com.webbanmatkinh.dto.UserDTO;
+import com.webbanmatkinh.entity.UserEntity;
+import com.webbanmatkinh.service.impl.CustomerNotFoundException;
+
+public interface IUserService {
+	public UserDTO insert(UserDTO dto);
+
+	UserEntity findOneByUserNameAndStatus(String username, int status);
+
+	UserEntity findOne(Long id);
+
+	List<UserEntity> findByRole(Long roleid);
+
+	void deleteByRole(Long roleid);
+
+	UserDTO update(UserDTO dto);
+
+	void updatePassword(UserEntity user, String newPass);
+
+	UserEntity get(String resetPasswordToken);
+
+	void updateResetPassword(byte[] token, String email) throws CustomerNotFoundException;
+
+}

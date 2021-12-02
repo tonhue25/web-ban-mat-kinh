@@ -22,6 +22,7 @@ public class ProductCartConverter {
 		result.setProduct(productConverter.toDto(entity.getProduct()));
 		result.setQuantity(entity.getQuantity());
 		result.setStatus(entity.getStatus());
+		result.setPrice(entity.getPrice());
 		return result;
 	}
 	
@@ -31,6 +32,7 @@ public class ProductCartConverter {
 		result.setProduct(productConverter.toEntity(dto.getProduct()));
 		result.setQuantity(dto.getQuantity());
 		result.setStatus(dto.getStatus());
+		result.setPrice(dto.getPrice());
 		return result;
 	}
 	
@@ -39,6 +41,7 @@ public class ProductCartConverter {
 		result.setProduct(productConverter.toEntity(dto.getProduct()));
 		result.setQuantity(dto.getQuantity());
 		result.setStatus(dto.getStatus());
+		result.setPrice(dto.getPrice());
 		return result;
 	}	
 }

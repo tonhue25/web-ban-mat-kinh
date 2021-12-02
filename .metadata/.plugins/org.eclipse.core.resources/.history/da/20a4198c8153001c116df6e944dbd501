@@ -1,0 +1,21 @@
+package com.webbanmatkinh.service;
+
+import java.util.List;
+
+import com.webbanmatkinh.dto.UserDTO;
+import com.webbanmatkinh.entity.UserEntity;
+
+public interface IUserService {
+	public UserDTO insert(UserDTO dto);
+
+	UserEntity findOneByUserNameAndStatus(String username, int status);
+
+	UserEntity findOne(Long id);
+
+	List<UserEntity> findByRole(Long roleid);
+
+	void deleteByRole(Long roleid);
+
+	UserDTO update(UserDTO dto);
+
+}

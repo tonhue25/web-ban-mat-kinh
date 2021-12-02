@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: html_head(removeTag='none')" />
+<body>
+<div class = "container-fluid">
+<div th:replace="fragments :: topnav">Top Navigation Menu</div>
+
+<div class = "text-center">
+<h2>[[${title]]</h2>
+<h4>[[${message]]</h4>
+
+</div>
+
+<div th:replace = "fragments :: "></div>
+
+</div>
+</body>
+</html>

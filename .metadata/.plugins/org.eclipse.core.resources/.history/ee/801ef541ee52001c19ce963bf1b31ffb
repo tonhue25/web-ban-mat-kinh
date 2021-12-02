@@ -1,0 +1,5 @@
+package com.webbanmatkinh.dto;
+
+public class MailDTO {
+
+}

@@ -16,6 +16,7 @@
             /WEB-INF/context/applicationContext.xml
            /WEB-INF/context/security.xml  
            /WEB-INF/context/spring-config-upload.xml
+           /WEB-INF/context/spring-config-gmail.xml
         </param-value>
     </context-param>
     
@@ -68,7 +69,25 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-   
+    
+    <!-- CharacterEncodingFilter - phải có cái này thì -->
+  <filter>
+    <filter-name>utf8</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>utf8</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+    
 </web-app>
     
     

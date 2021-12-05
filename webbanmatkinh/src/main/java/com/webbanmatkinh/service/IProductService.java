@@ -56,4 +56,11 @@ public interface IProductService {
 
 	List<ProductDTO> findAllByNewproduct(String newProduct);
 
+	List<ProductEntity> findByNameLike(String name);
+
+	Page<ProductEntity> findByNameLike(String name, Pageable pageable);
+
+	List<ProductDTO> findAllByNameLike(Pageable pageable, String name);
+
+	int countByNameLike(String name);
 }

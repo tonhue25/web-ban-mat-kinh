@@ -1,0 +1,46 @@
+package com.webbanmatkinh.controller.web;
+
+import org.springframework.stereotype.Controller;
+
+@Controller(value = "findControllerOfWeb")
+public class FindController {
+
+	/*@Autowired
+	private IProductService productService;
+
+	@Autowired
+	private ICategoryService categoryService;*/
+	
+	/*@RequestMapping(value = "/tim-kiem", method = RequestMethod.GET)
+	public ModelAndView showProduct(
+			@RequestParam(name = "name" , required = false) String name,
+			@RequestParam("page") int page, 
+			HttpServletRequest request, 
+			@RequestParam("limit") int limit) {
+		ModelAndView mav = new ModelAndView("web/shop");
+		ProductDTO model = new ProductDTO();
+		model.setPage(page);
+		model.setLimit(limit); 
+		Pageable pageable = new PageRequest(page - 1, limit);
+		
+		if(StringUtils.hasText(name)) {
+			model.setListResult(productService.findAllByNameLike(pageable, name));
+			model.setTotalItem(productService.countByNameLike(name));
+			mav.addObject("name", name);
+		}
+		else {
+			model.setListResult(productService.findAll(pageable));
+			model.setTotalItem(productService.getTotalItem());
+		}
+		model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getLimit()));
+		mav.addObject("products", model);
+		mav.addObject("categories", categoryService.findAll());
+		return mav;
+	}
+	
+	@RequestMapping( method = RequestMethod.POST)
+	public String resetPassword2(HttpServletRequest request) {
+		String name = request.getParameter("name");
+		return "redirect:/tim-kiem";
+	}*/
+}

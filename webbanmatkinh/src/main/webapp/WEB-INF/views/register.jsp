@@ -28,6 +28,7 @@
 						<div class="login-title">
 							<h2 class="text-center text-primary">Register</h2>
 						</div>
+						<span id='message'></span>
 						<form:form id="formRegister" modelAttribute="user">
 							<section>
 								<div class="form-wrap max-width-600 mx-auto">
@@ -48,15 +49,15 @@
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Password*</label>
 										<div class="col-sm-8">
-											<form:input path="password" type="password"
-												class="form-control" id="password" />
+											<form:input path="password" type="password" 
+												class="form-control" id="password" required="required" autofocus="autofocus" />
 										</div>
 									</div>
 									<div class="form-group row">
-										<label class="col-sm-4 col-form-label">Confirm
-											Password*</label>
+										<label class="col-sm-4 col-form-label">Confirm Password*</label>
 										<div class="col-sm-8">
-											<input type="password" class="form-control">
+											<input type="password" name="confirmpassword" id="confirmpassword"  
+											class="form-control" required="required" autofocus="autofocus" onkeyup='check();'>
 										</div>
 									</div>
 								</div>
@@ -74,7 +75,7 @@
 										<label class="col-sm-4 col-form-label">Phone*</label>
 										<div class="col-sm-8">
 											<form:input path="phone" type="text" class="form-control"
-												id="phone" />
+												id="tel" />
 										</div>
 									</div>
 									<div class="form-group row">
@@ -93,5 +94,19 @@
 			</div>
 		</div>
 	</div>
+	<content tag = "script">
+		<script>
+			var check = function() {
+				  if (document.getElementById('password').value ==
+				    document.getElementById('confirmpassword').value) {
+				    document.getElementById('message').style.color = 'green';
+				    document.getElementById('message').innerHTML = 'matching';
+				  } else {
+				    document.getElementById('message').style.color = 'red';
+				    document.getElementById('message').innerHTML = 'not matching';
+				  }
+				} 
+		</script>
+	</content>
 </body>
 </html>

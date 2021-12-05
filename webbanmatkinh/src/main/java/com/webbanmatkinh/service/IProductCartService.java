@@ -43,4 +43,6 @@ public interface IProductCartService {
 	double noPromotionPrice(Long cartid);
 	
 	void delete(Long cartId);
+
+	List<ProductCartEntity> findByProduct_id(Long id);
 }

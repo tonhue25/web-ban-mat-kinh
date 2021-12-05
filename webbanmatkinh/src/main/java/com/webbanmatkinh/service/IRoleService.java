@@ -1,6 +1,7 @@
 package com.webbanmatkinh.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.data.domain.Pageable;
 
@@ -18,5 +19,8 @@ public interface IRoleService {
 	List<RoleDTO> findAll(Pageable pageable);
 
 	int getTotalItem();
+	
+	Map<String, String> findAll();
 
+	RoleEntity findOneByCode(String code);
 }

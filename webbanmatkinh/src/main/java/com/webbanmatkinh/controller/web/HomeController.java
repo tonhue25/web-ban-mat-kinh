@@ -70,7 +70,6 @@ public class HomeController {
 		return mav;
 	}
 
-	// gửi mail ok, gửi từ người đang login vào web, gửi sang contactuspandashop@gmail.com.
 	@RequestMapping(value = "/contact", method = RequestMethod.POST)
 	public String sendmail2(@ModelAttribute("user") MailDTO user, ModelMap model) {
 		MimeMessage mail = mailSender.createMimeMessage();
@@ -163,4 +162,5 @@ public class HomeController {
 		session.setAttribute("Cart", cart);
 		return mav;
 	}
+	
 }

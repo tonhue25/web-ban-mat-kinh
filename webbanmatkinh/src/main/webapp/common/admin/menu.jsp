@@ -1,13 +1,13 @@
 	<div class="left-side-bar">
-		<div class="brand-logo">
+		<%-- <div class="brand-logo">
 			<a href="<c:url value="/quan-tri/trang-chu"/>">
 				<span class="micon dw dw-house-1"></span><span class="mtext"> Admin page</span>
 			</a>
-		</div>
+		</div> --%>
 		<div class="menu-block customscroll">
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
-					<li class="dropdown">
+					<%-- <li class="dropdown">
 						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-library"></span><span class="mtext">Manage</span>
 						</a>
@@ -17,18 +17,43 @@
 							<li><a href="<c:url value="/quan-tri/slider/tat-ca-slider?page=1&limit=5"/>">Slider</a></li>
 							<li><a href="<c:url value="/quan-tri/vai-tro/danh-sach?page=1&limit=5"/>">Role</a></li>
 						</ul>
-					</li>
-					<li class="dropdown">
-						<a href="javascript:;" class="dropdown-toggle">
-							<span class="micon dw dw-right-arrow1"></span><span class="mtext">Additional Pages</span>
+					</li> --%>
+					<li>
+						<a href="<c:url value="/quan-tri/trang-chu"/>" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-home"></span><span class="mtext">Home</span>
 						</a>
-						<ul class="submenu">
-							<li><a href="login.html">Login</a></li>
-							<li><a href="forgot-password.html">Forgot Password</a></li>
-							<li><a href="reset-password.html">Reset Password</a></li>
-						</ul>
+					</li>
+					<li>
+						<a href="<c:url value="/quan-tri/san-pham/danh-sach?page=1&limit=5"/>" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-paperclip"></span><span class="mtext">Product</span>
+						</a>
+					</li>
+					<li>
+						<a href="<c:url value="/quan-tri/the-loai/tat-ca-the-loai?page=1&limit=5"/>" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-list1"></span><span class="mtext">Category</span>
+						</a>
+					</li>
+					<li>
+						<a href="<c:url value="/quan-tri/slider/tat-ca-slider?page=1&limit=5"/>" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-chat3"></span><span class="mtext">Slider</span>
+						</a>
+					</li>
+					<li>
+						<a href="<c:url value="/quan-tri/user/danh-sach?page=1&limit=5"/>" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-user"></span><span class="mtext">User</span>
+						</a>
+					</li>
+					<li>
+						<a href="<c:url value="/quan-tri/vai-tro/danh-sach?page=1&limit=5"/>" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-roller-skate"></span><span class="mtext">Role</span>
+						</a>
 					</li>
 					
+					<!-- <li>
+						<a href="invoice.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-invoice"></span><span class="mtext">Invoice</span>
+						</a>
+					</li> -->
 				</ul>
 			</div>
 		</div>

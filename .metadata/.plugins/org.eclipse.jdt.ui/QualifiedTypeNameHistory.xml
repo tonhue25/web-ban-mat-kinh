@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.webbanmatkinh.converter.CartConverter"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.converter.ProductConverter"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.entity.ProductCartEntity"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.dto.ProductCartDTO"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.repository.UserRepository"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
-<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-<fullyQualifiedTypeName name="org.springframework.context.MessageSource"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
 <fullyQualifiedTypeName name="com.webbanmatkinh.service.IRoleService"/>
 <fullyQualifiedTypeName name="com.webbanmatkinh.repository.RoleRepository"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.service.IUserService"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.Payer"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.PayerInfo"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.RedirectUrls"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.Details"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.Amount"/>
 <fullyQualifiedTypeName name="javax.transaction.Transaction"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.ItemList"/>
@@ -31,7 +20,6 @@
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="com.webbanmatkinh.entity.BillEntity"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.dto.UserDTO"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
 <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Modifying"/>
@@ -45,9 +33,7 @@
 <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
 <fullyQualifiedTypeName name="javax.mail.internet.MimeMessage"/>
 <fullyQualifiedTypeName name="org.springframework.mail.javamail.MimeMessageHelper"/>
-<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
 <fullyQualifiedTypeName name="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Locale"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Objects"/>
@@ -57,7 +43,21 @@
 <fullyQualifiedTypeName name="com.webbanmatkinh.util.URLUtils"/>
 <fullyQualifiedTypeName name="com.opensymphony.module.sitemesh.mapper.SessionDecoratorMapper"/>
 <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.entity.UserEntity"/>
 <fullyQualifiedTypeName name="java.util.Base64"/>
 <fullyQualifiedTypeName name="java.util.Base64.Encoder"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.service.IUserService"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.dto.UserDTO"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.entity.UserEntity"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.constant.SystemConstant"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.service.IProductCartService"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.repository.ProductRepository"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
+<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.FactoryBean"/>
+<fullyQualifiedTypeName name="org.apache.taglibs.standard.lang.jstl.test.beans.Factory"/>
+<fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.entity.ProductEntity"/>
+<fullyQualifiedTypeName name="com.mysql.cj.Session"/>
 </qualifiedTypeNameHistroy>

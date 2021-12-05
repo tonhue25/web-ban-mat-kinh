@@ -42,7 +42,7 @@ public class UserEntity extends BaseEntity{
 	private int status;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "roleid" , columnDefinition = "int NOT NULL")
+	@JoinColumn(name = "roleid")
 	private RoleEntity role;
 	
 	@OneToOne(mappedBy = "userid")

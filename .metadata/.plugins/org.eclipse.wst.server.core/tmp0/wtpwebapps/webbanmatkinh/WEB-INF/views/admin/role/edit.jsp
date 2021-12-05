@@ -121,10 +121,12 @@
             data: JSON.stringify(data),
             dataType: 'json',
             success: function (result) {
-            	window.location.href = "${editNewURL}?id="+result.id+"&message=insert_success";
+            	sc();
+            	/* window.location.href = "${editNewURL}?id="+result.id+"&message=insert_success"; */
             },
             error: function (error) {
-            	window.location.href = "${newURL}?page=1&limit=5&message=error_system";
+            	oop();
+            	/* window.location.href = "${newURL}?page=1&limit=5&message=error_system"; */
             }
         });
 	}
@@ -137,13 +139,33 @@
             data: JSON.stringify(data),
             dataType: 'json',
             success: function (result) {
-            	window.location.href = "${editNewURL}?id="+result.id+"&message=update_success";
+            	sc();
+            	/* window.location.href = "${editNewURL}?id="+result.id+"&message=update_success"; */
             },
             error: function (error) {
-            	window.location.href = "${editNewURL}?id="+result.id+"&message=error_system";
+            	oop();
+            	/* window.location.href = "${editNewURL}?id="+result.id+"&message=error_system"; */
             }
         });
 	}
+	
+	function sc() {
+		Swal.fire({
+			  position: 'center',
+			  icon: 'success',
+			  title: 'Your work has been saved',
+			  showConfirmButton: false,
+			  timer: 1500
+			})
+	        };
+	
+	function oop() {
+	Swal.fire({
+		  icon: 'error',
+		  title: 'Oops...',
+		  text: 'Something went wrong!',
+		})
+	};
 </script>
 </content>
 </body>

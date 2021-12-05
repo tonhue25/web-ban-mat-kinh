@@ -17,6 +17,8 @@ public class UserConverter {
 	
 	public UserDTO toDto(UserEntity entity) {
 		UserDTO result = new UserDTO();
+		result.setId(entity.getId());
+		
 		result.setUserName(entity.getUserName());
 		result.setPassword(entity.getPassword());
 		result.setFullName(entity.getFullName());
@@ -24,14 +26,17 @@ public class UserConverter {
 		result.setPhone(entity.getPhone());
 		result.setAddress(entity.getAddress());
 		result.setStatus(entity.getStatus());
-		result.setRoleid(entity.getRole().getId());
+		
+		RoleEntity role = roleRepository.findOne(entity.getRole().getId());
+		result.setRoleCode(role.getCode());
+		result.setRoleid(role.getId());
 		
 		return result;
 	}
-
+	
+	// them moi
 	public UserEntity toEntity(UserDTO dto) {
 		UserEntity result = new UserEntity();
-		RoleEntity role = roleRepository.findOne(SystemConstant.ROLE_USER);
 		result.setUserName(dto.getUserName());
 		result.setPassword(dto.getPassword());
 		result.setFullName(dto.getFullName());
@@ -39,13 +44,13 @@ public class UserConverter {
 		result.setPhone(dto.getPhone());
 		result.setAddress(dto.getAddress());
 		result.setStatus(SystemConstant.ACTIVE_STATUS);
-		result.setRole(role);
 		return result;
 	}
 	
-	public UserEntity toEntity(UserEntity result,UserDTO dto) {
+	// update 
+	public UserEntity toEntity(UserEntity result, UserDTO dto) {
 		// them id thi no moi ko bill null id.
-		result.setId(dto.getId());
+		/*result.setId(dto.getId());*/
 		result.setPassword(dto.getPassword());
 		result.setUserName(dto.getUserName());
 		result.setFullName(dto.getFullName());

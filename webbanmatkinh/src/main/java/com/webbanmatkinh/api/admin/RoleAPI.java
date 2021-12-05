@@ -25,8 +25,5 @@ public class RoleAPI {
 		return roleService.update(dto);
 	}
 	
-	/*@DeleteMapping("/api/role")
-	public void deleteCategory(@RequestBody long[] ids) {
-		roleService.delete(ids);
-	}*/
+	// không cho xóa quyền. chỉ cho sửa hoặc thêm quyền thôi.
 }

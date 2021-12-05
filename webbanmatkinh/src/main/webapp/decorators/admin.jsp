@@ -5,10 +5,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
+	<title>PandaShop</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="<c:url value='/template/admin/vendors/images/apple-touch-icon.png'/>">
+	
 	<link rel="icon" type="image/png" sizes="32x32" href="<c:url value='/template/image/avatar.jpg'/>">
 	<link rel="icon" type="image/png" sizes="16x16" href="<c:url value='/template/image/avatar.jpg'/>">
 	<!-- Mobile Specific Metas -->

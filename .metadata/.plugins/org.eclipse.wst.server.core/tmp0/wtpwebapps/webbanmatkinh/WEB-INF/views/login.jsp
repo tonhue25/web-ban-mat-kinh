@@ -21,36 +21,14 @@
 	<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-6 col-lg-7">
-					<img
-						src="<c:url value='/template/admin/vendors/images/login-page-img.png'/>"
-						alt="">
+					<img src="<c:url value='/template/admin/vendors/images/login-page-img.png'/>" alt="">
 				</div>
 				<div class="col-md-6 col-lg-5">
 					<div class="login-box bg-white box-shadow border-radius-10">
 						<div class="login-title">
 							<h2 class="text-center text-primary">Login</h2>
 						</div>
-						<form id="formLogin" action="j_spring_security_check"
-							method="post">
-							<div class="select-role">
-								<div class="btn-group btn-group-toggle" data-toggle="buttons">
-									<label class="btn active"> <input type="radio"
-										name="options" id="admin">
-										<div class="icon">
-											<img
-												src="<c:url value='/template/admin/vendors/images/briefcase.svg'/>"
-												class="svg" alt="">
-										</div> <span>I'm</span> Manager
-									</label> <label class="btn"> <input type="radio" name="options"
-										id="user">
-										<div class="icon">
-											<img
-												src="<c:url value='/template/admin/vendors/images/person.svg'/>"
-												class="svg" alt="">
-										</div> <span>I'm</span> Employee
-									</label>
-								</div>
-							</div>
+						<form id="formLogin" action="j_spring_security_check" method="post">
 							<div class="input-group custom">
 								<input type="text" class="form-control" id="name" name="j_username"
 									value="" placeholder="Username">
@@ -76,14 +54,12 @@
 							<div class="row">
 								<div class="col-sm-12">
 									<div class="input-group mb-0">
-										<button class="btn btn-primary btn-lg btn-block" type="submit" onclick="login()">Login</button>
+										<button class="btn btn-primary btn-lg btn-block" type="submit" >Login</button>
 									</div>
-									<div class="font-16 weight-600 pt-10 pb-10 text-center"
-										data-color="#707373">OR</div>
+									<div class="font-16 weight-600 pt-10 pb-10 text-center" data-color="#707373">OR</div>
 									<div class="input-group mb-0">
 										<a class="btn btn-outline-primary btn-lg btn-block"
-											href="<c:url value='/dang-ki'/>">Register To Create
-											Account</a>
+											href="<c:url value='/dang-ki'/>">Register To Create Account</a>
 									</div>
 								</div>
 							</div>

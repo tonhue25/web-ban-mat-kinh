@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Default Basic Forms" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="String"/>
-			<item value="Custom Checkbox"/>
-			<item value="Help text"/>
-			<item value="Custom Radio"/>
-			<item value="horizontal Basic Forms"/>
-			<item value="Textarea"/>
-			<item value="Example file input"/>
-			<item value="Input Validation"/>
-			<item value="source code"/>
-			<item value="code"/>
-			<item value="Color"/>
-			<item value="click here"/>
-			<item value="2018"/>
-			<item value="Data Table with Checckbox select"/>
-			<item value="Data Table with Export Buttons"/>
+			<item value="Default Basic Forms"/>
+			<item value="paper"/>
+			<item value="page"/>
+			<item value="key"/>
+			<item value="supply"/>
+			<item value="supp"/>
+			<item value="role"/>
+			<item value="ro"/>
+			<item value="dw-role"/>
+			<item value="dw-rol"/>
+			<item value="dw-produ"/>
+			<item value="dw-produc"/>
+			<item value="dw-pro"/>
+			<item value="dw-cate"/>
+			<item value="dw-cat"/>
 		</list>
 		<list key="replacehistory">
 			<item value="getSalePrice"/>

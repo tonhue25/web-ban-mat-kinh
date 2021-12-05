@@ -17,33 +17,32 @@ import javax.persistence.Table;
 public class ProductEntity extends BaseEntity{
 
 	@Column(name = "name" , columnDefinition = "NVARCHAR(100) NOT NULL")
-	private String name; //
+	private String name;
 	
-	// ben kia de the nay: @OneToMany(mappedBy = "category") => private CategoryEntity category;
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "category_id" , columnDefinition = "int NOT NULL")
-	private CategoryEntity category;//
+	@JoinColumn(name = "category_id")
+	private CategoryEntity category;
 	
 	@Column(name = "price")
-	private double price;//
+	private double price;
 	
 	@Column(name = "hotproduct", columnDefinition = "NVARCHAR(50) NOT NULL")
-	private String hotproduct;//
+	private String hotproduct;
 	
 	@Column(name = "newproduct" , columnDefinition = "NVARCHAR(50) NOT NULL")
-	private String newproduct;//
+	private String newproduct;
 	
 	@Column(name = "image" , columnDefinition = "NVARCHAR(50) NOT NULL")
-	private String image;//
+	private String image;
 	
 	@Column(name = "sale")
-	private double sale;//
+	private double sale;
 	
 	@Column(name = "shortdescription", columnDefinition = "NVARCHAR(500) NOT NULL")
-	private String shortDescription;//
+	private String shortDescription;
 
 	@Column(name = "detail", columnDefinition = "NVARCHAR(500) NOT NULL")
-	private String detail;//
+	private String detail;
 	
 	@OneToMany(mappedBy = "product", cascade = CascadeType.MERGE)
     private Set<ProductCartEntity> productCart = new HashSet<>();
@@ -136,4 +135,21 @@ public class ProductEntity extends BaseEntity{
 	public void setImage(String image) {
 		this.image = image;
 	}
+	
+	public String getHotproduct() {
+		return hotproduct;
+	}
+
+	public void setHotproduct(String hotproduct) {
+		this.hotproduct = hotproduct;
+	}
+
+	public String getNewproduct() {
+		return newproduct;
+	}
+
+	public void setNewproduct(String newproduct) {
+		this.newproduct = newproduct;
+	}
+
 }

@@ -13,7 +13,7 @@
 <div class="main-container">
 	<form action="<c:url value='/quan-tri/the-loai/tat-ca-the-loai'/>" id="formSubmit" method="get">
 		<div class="pd-ltr-20 xs-pd-20-10">
-			<div class="min-height-200px">
+			<div class="min-height-100px">
 				<div class="page-header">
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
@@ -63,7 +63,7 @@
 								</th>
 								<th class="table-plus datatable-nosort">Name</th>
 								<th>Code</th>
-								<th class="datatable-nosort">Action</th>
+								<th class="datatable-nosort"></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -75,21 +75,20 @@
 								<td>${item.name}</td>
 								<td>${item.code}</td>
 								<td>
-									<div class="dropdown">
+									<!-- <div class="dropdown">
 										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 											<i class="dw dw-more"></i>
 										</a>
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"> -->
 											
 											<c:url var="updateNewURL" value="/quan-tri/the-loai/chinh-sua">
 												<c:param name="id" value="${item.id}" />
 											</c:url> 
-											<a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-eye"></i> View</a>
-											<a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-edit2"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-											
+											<a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-edit2"></i></a>
+											<%-- <a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-edit2"></i> Edit</a>
+											<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
 										</div>
-									</div>
+									</div> --%>
 								</td>
 							</tr>
 						</c:forEach>

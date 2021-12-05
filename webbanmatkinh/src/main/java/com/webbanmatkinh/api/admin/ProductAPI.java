@@ -27,7 +27,7 @@ public class ProductAPI {
 		return productService.update(updateProduct);
 	}
 	
-	// ho tro xoa nhieu bai viet => nhan mang cac id sp can xoa
+	// xoa hang san pham
 	@DeleteMapping("/api/product")
 	public void deleteProduct(@RequestBody long[] ids) {
 		productService.delete(ids);

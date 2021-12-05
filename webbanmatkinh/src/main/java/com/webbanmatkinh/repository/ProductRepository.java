@@ -13,10 +13,16 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>{
 	List<ProductEntity> findByCategory_id(Long category_id);
 	List<ProductEntity> findByHotproduct(String hotProduct);
 	List<ProductEntity> findByNewproduct(String newProduct);
+	
 	Page<ProductEntity> findByCategory_id(Long category_id,Pageable pageable);
 	Page<ProductEntity> findByHotproduct(String hotProduct,Pageable pageable);
 	Page<ProductEntity> findByNewproduct(String newProduct,Pageable pageable);
+	
 	int countByNewproduct(String newProduct);
 	int countByHotproduct(String hotProduct);
 	int countByCategory_id(Long category_id);
+	
+	List<ProductEntity> findByNameLike(String name);
+	Page<ProductEntity> findByNameLike(String name,Pageable pageable);
+	int countByNameLike(String name);
 }

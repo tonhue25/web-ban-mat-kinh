@@ -18,41 +18,41 @@ import com.webbanmatkinh.service.ICategoryService;
 import com.webbanmatkinh.service.IProductService;
 
 @Service
-public class ProductService implements IProductService{
-	
+public class ProductService implements IProductService {
+
 	@Autowired
 	private ProductRepository productRepository;
-	
+
 	@Autowired
 	private IProductService productService;
-	
+
 	@Autowired
 	private ProductConverter productConverter;
-	
+
 	@Autowired
-	private ICategoryService  categoryService;
-		
+	private ICategoryService categoryService;
+
 	@Override
 	public ProductEntity findOne(Long id) {
 		return productRepository.findOne(id);
 	}
-	
+
 	@Override
 	public int countByCategory_id(Long category_id) {
 		return productRepository.countByCategory_id(category_id);
 	}
 
 	@Override
-	public List<ProductDTO> findAll(Pageable pageable){
-		List<ProductDTO> models= new ArrayList<>();
-		List<ProductEntity>entities =  productRepository.findAll(pageable).getContent();
-		for(ProductEntity item : entities) {
+	public List<ProductDTO> findAll(Pageable pageable) {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findAll(pageable).getContent();
+		for (ProductEntity item : entities) {
 			ProductDTO productDTO = productConverter.toDto(item);
 			models.add(productDTO);
 		}
 		return models;
 	}
-	
+
 	@Override
 	public List<ProductDTO> findAllByCategory(Pageable pageable, Long categoryid) {
 		List<ProductDTO> models = new ArrayList<>();
@@ -64,6 +64,17 @@ public class ProductService implements IProductService{
 		return models;
 	}
 	
+	@Override
+	public List<ProductDTO> findAllByNameLike(Pageable pageable, String name) {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = findByNameLike(name,pageable).getContent();
+		for (ProductEntity item : entities) {
+			ProductDTO productDTO = productConverter.toDto(item);
+			models.add(productDTO);
+		}
+		return models;
+	}
+
 	@Override
 	public List<ProductEntity> findByCategory_id(Long category_id) {
 		return productRepository.findByCategory_id(category_id);
@@ -94,30 +105,31 @@ public class ProductService implements IProductService{
 		productEntity = productRepository.save(productEntity);
 		return productConverter.toDto(productEntity);
 	}
-	
-	// sua 
+
+	// sua
 	@Override
 	@Transactional
 	public ProductDTO update(ProductDTO dto) {
 		ProductEntity oldProduct = productService.findOne(dto.getId());
-		ProductEntity updateProduct = productConverter.toEntity(oldProduct,dto);
+		ProductEntity updateProduct = productConverter.toEntity(oldProduct, dto);
 		updateProduct.setCategory(categoryService.findOneByCode(dto.getCategoryCode()));
 		return productConverter.toDto(productRepository.save(oldProduct));
 	}
 
+	// xóa sản phẩm.
 	@Override
 	@Transactional
 	public void delete(long[] ids) {
-		for(long id:ids) {
+		for (long id : ids) {
 			productRepository.delete(id);
 		}
 	}
 
 	@Override
 	public List<ProductDTO> findAll() {
-		List<ProductDTO> models= new ArrayList<>();
-		List<ProductEntity>entities =  productRepository.findAll();
-		for(ProductEntity item : entities) {
+		List<ProductDTO> models = new ArrayList<>();
+		List<ProductEntity> entities = productRepository.findAll();
+		for (ProductEntity item : entities) {
 			ProductDTO productDTO = productConverter.toDto(item);
 			models.add(productDTO);
 		}
@@ -127,8 +139,8 @@ public class ProductService implements IProductService{
 	@Override
 	public void deleteByCategory(Long categoryid) {
 		List<ProductEntity> entities = productRepository.findAll();
-		for(ProductEntity item : entities) {
-			if(item.getCategory().getId() == categoryid) {
+		for (ProductEntity item : entities) {
+			if (item.getCategory().getId() == categoryid) {
 				productRepository.delete(item);
 			}
 		}
@@ -153,7 +165,7 @@ public class ProductService implements IProductService{
 	public Page<ProductEntity> findByNewproduct(String newProduct, Pageable pageable) {
 		return productRepository.findByNewproduct(newProduct, pageable);
 	}
-	
+
 	@Override
 	public List<ProductDTO> findAllByNewproduct(String newProduct) {
 		List<ProductDTO> models = new ArrayList<>();
@@ -164,7 +176,7 @@ public class ProductService implements IProductService{
 		}
 		return models;
 	}
-	
+
 	@Override
 	public List<ProductDTO> findAllByNewproduct(Pageable pageable, String newProduct) {
 		List<ProductDTO> models = new ArrayList<>();
@@ -175,7 +187,7 @@ public class ProductService implements IProductService{
 		}
 		return models;
 	}
-	
+
 	@Override
 	public List<ProductDTO> findAllByHotproduct(String hotProduct) {
 		List<ProductDTO> models = new ArrayList<>();
@@ -186,7 +198,7 @@ public class ProductService implements IProductService{
 		}
 		return models;
 	}
-	
+
 	@Override
 	public List<ProductDTO> findAllByHotproduct(Pageable pageable, String hotProduct) {
 		List<ProductDTO> models = new ArrayList<>();
@@ -207,6 +219,20 @@ public class ProductService implements IProductService{
 	public int countByHotproduct(String hotProduct) {
 		return productRepository.countByHotproduct(hotProduct);
 	}
-		
+
+	@Override
+	public List<ProductEntity> findByNameLike(String name) {
+		return productRepository.findByNameLike(name);
+	}
+
+	@Override
+	public Page<ProductEntity> findByNameLike(String name, Pageable pageable) {
+		return productRepository.findByNameLike(name, pageable);
+	}
+
+	@Override
+	public int countByNameLike(String name) {
+		return productRepository.countByNameLike(name);
+	}
+
 }
- 

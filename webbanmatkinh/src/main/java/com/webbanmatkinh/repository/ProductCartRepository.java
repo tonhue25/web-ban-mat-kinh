@@ -18,4 +18,7 @@ public interface ProductCartRepository extends JpaRepository<ProductCartEntity, 
 	List<ProductCartEntity> findByProductAndCart(ProductEntity product, CartEntity cart);
 	
 	List<ProductCartEntity> findByCart(CartEntity cart);
+	
+	// tìm thử coi mã sản phẩm đó, có tồn tại trong giỏ hảng của ai đó không, nếu danh sách rỗng thì cho xóa.
+	List<ProductCartEntity> findByProduct_id(Long id);
 }

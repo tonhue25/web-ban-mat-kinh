@@ -1,0 +1,36 @@
+package com.webbanmatkinh.api.admin;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.webbanmatkinh.dto.ProductDTO;
+import com.webbanmatkinh.service.IProductService;
+
+// can co value de phan biet ProductAPI cua web
+@RestController(value = "userAPIOfAdmin")
+public class UserAPI {
+	
+	@Autowired
+	private IProductService productService;
+	
+	@PostMapping("/api/user")
+	public ProductDTO createProduct(@RequestBody ProductDTO productDTO) {
+		return productService.insert(productDTO);
+	}
+	
+	@PutMapping("/api/user")
+	public ProductDTO updateProduct(@RequestBody ProductDTO updateProduct) {
+		return productService.update(updateProduct);
+	}
+	
+	@DeleteMapping("/api/user")
+	public void deleteProduct(@RequestBody long[] ids) {
+		// delete này là chỉ đổi trạng thái của nó thôi, mà xóa luôn thì không được đâu.
+		// nếu z thì bên admin phải thêm cột trạng thái vào.
+		productService.delete(ids);
+	}
+}

@@ -90,6 +90,7 @@ public class ProductController {
 			product.setImage(fileName);
 			product.setHotProduct(SystemConstant.NO_NEW_PRODUCT);
 			product.setNewProduct(SystemConstant.NEW_PRODUCT);
+			/*product.setStatus(SystemConstant.ACTIVE_STATUS);*/
 			String imagePath = uploadFile.getBasePath() + File.separator + fileName;
 			file.transferTo(new File(imagePath));
 			model.addAttribute("model", product);
@@ -125,6 +126,7 @@ public class ProductController {
 			product.setImage(fileName);
 			product.setHotProduct(SystemConstant.NO_NEW_PRODUCT);
 			product.setNewProduct(SystemConstant.NO_NEW_PRODUCT);
+			/*product.setStatus(SystemConstant.ACTIVE_STATUS);*/
 			model.addAttribute("model", product);
 			productService.update(product);
 		}

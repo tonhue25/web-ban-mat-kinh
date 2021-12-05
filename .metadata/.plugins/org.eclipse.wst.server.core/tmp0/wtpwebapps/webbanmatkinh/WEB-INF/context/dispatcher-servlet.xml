@@ -30,7 +30,7 @@
    
    <!-- chinh duong dan nay de thiet lap luu anh o cho nao do trong project -->
 	<bean id="uploadFile" class="com.webbanmatkinh.api.admin.UploadFile"> 
-	 	<property name="basePath" value="E:\\webbanmatkinh\\webbanmatkinh\\webbanmatkinh\\src\\main\\webapp\\template\\image\"/>
+	 	<property name="basePath" value="E:\\webbanmatkinh\\webbanmatkinh\\src\\main\\webapp\\template\\image\"/>
 	</bean>
 	
    <mvc:resources location="/template/" mapping="/template/**"></mvc:resources>

@@ -1,8 +1,8 @@
 package com.webbanmatkinh.dto;
 
-public class ProductDTO extends AbstractDTO<ProductDTO>{
-	private String name; 
-	private String shortDescription; 
+public class ProductDTO extends AbstractDTO<ProductDTO> {
+	private String name;
+	private String shortDescription;
 	private String detail;
 	private long categoryId;
 	private String categoryCode;
@@ -89,7 +89,7 @@ public class ProductDTO extends AbstractDTO<ProductDTO>{
 	}
 
 	public double getSalePrice() {
-		return (this.price - price*(sale/100));
+		return (this.price - price * (sale / 100));
 	}
 
 	public String getImage() {

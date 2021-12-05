@@ -12,7 +12,7 @@
 <div class="main-container">
 	<form action="<c:url value='/quan-tri/vai-tro/danh-sach'/>" id="formSubmit" method="get">
 		<div class="pd-ltr-20 xs-pd-20-10">
-			<div class="min-height-200px">
+			<div class="min-height-100px">
 				<div class="page-header">
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
@@ -44,12 +44,11 @@
 							href='${createNewURL}'> 
 							<span> <i class="fa fa-plus-circle bigger-110 purple"></i></span>
 						</a>
-						<button id="btnDelete" type="button" onclick="warningBeforeDelete()"
+						<!-- <button id="btnDelete" type="button" onclick="warningBeforeDelete()"
 							class="dt-button buttons-html5 btn btn-white btn-primary btn-bold"
 							data-toggle="tooltip" title='Xóa role'>
 							<span> <i class="fa fa-trash-o bigger-110 pink"></i></span>
-						</button>
-						
+						</button> -->
 					</div>
 					</div>
 				</div>
@@ -63,7 +62,7 @@
 								</th>
 								<th class="table-plus datatable-nosort">Name</th>
 								<th>Code</th>
-								<th class="datatable-nosort">Action</th>
+								<th class="datatable-nosort"></th>
 							</tr>
 						</thead>
 						<tbody>
@@ -75,20 +74,10 @@
 								<td>${item.name}</td>
 								<td>${item.code}</td>
 								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-											<i class="dw dw-more"></i>
-										</a>
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<c:url var="updateNewURL" value="/quan-tri/vai-tro/chinh-sua">
-												<c:param name="id" value="${item.id}" />
-											</c:url> 
-											<a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-eye"></i> View</a>
-											<a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-edit2"></i> Edit</a>
-											<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
-											
-										</div>
-									</div>
+									<c:url var="updateNewURL" value="/quan-tri/vai-tro/chinh-sua">
+										<c:param name="id" value="${item.id}" />
+									</c:url> 
+									<a class="dropdown-item" href='${updateNewURL}'><i class="dw dw-edit2"></i></a>
 								</td>
 							</tr>
 						</c:forEach>

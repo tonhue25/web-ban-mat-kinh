@@ -48,7 +48,6 @@ public class UserController {
 	@Autowired
 	public JavaMailSender mailSender;
 
-	// ok
 	@RequestMapping(value = "/dang-ki", method = RequestMethod.GET)
 	public ModelAndView register() {
 		ModelAndView mav = new ModelAndView("register");
@@ -56,7 +55,6 @@ public class UserController {
 		return mav;
 	}
 
-	// ok
 	@RequestMapping(value = "/dang-ki", method = RequestMethod.POST)
 	public ModelAndView createAccount(@ModelAttribute("user") UserDTO user) {
 		ModelAndView mav = new ModelAndView("register");
@@ -76,23 +74,24 @@ public class UserController {
 			return mav;
 	}
 
-	//
+	// tai khoan 1 : admin redirect den quan-tri/trang-chu, 2 : nguoi dung tra ve web/myaccount.
 	@RequestMapping(value = "/tai-khoan", method = RequestMethod.GET)
-	public ModelAndView myaccount() {
-		ModelAndView mav = new ModelAndView("web/myaccount");
-		Long userId = userService
-				.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), SystemConstant.ACTIVE_STATUS)
-				.getId();
+	public String myaccount(ModelMap model) {
+		Long userId = userService.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), SystemConstant.ACTIVE_STATUS).getId();
 		UserEntity entity = userRepository.findOne(userId);
+		if(entity.getId()!=null) {
+			if(entity.getRole().getId() == 1) {
+				return "redirect:/quan-tri/trang-chu";
+			}
+		}
 		UserDTO user = userConverter.toDto(entity);
-		mav.addObject("user", user);
-		return mav;
+		model.addAttribute("user", user);
+		return "web/myaccount";
 	}
 
 	@RequestMapping(value = "/tai-khoan", method = RequestMethod.POST)
 	public String update(@ModelAttribute("user") UserDTO user, ModelMap model) {
-		Long userId = userService
-				.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), SystemConstant.ACTIVE_STATUS)
+		Long userId = userService.findOneByUserNameAndStatus(SecurityUtils.getPrincipal().getUsername(), SystemConstant.ACTIVE_STATUS)
 				.getId();
 		user.setId(userId);
 		user.setStatus(SystemConstant.ACTIVE_STATUS);
@@ -148,6 +147,7 @@ public class UserController {
 
 	@RequestMapping(value = "/doi-mat-khau", method = RequestMethod.GET)
 	public String resetPassword1(@Param(value = "token") String token, ModelMap model) {
+		// lấy token từ db
 		UserEntity entity = userService.get(token);
 		if (entity == null) {
 			return null;

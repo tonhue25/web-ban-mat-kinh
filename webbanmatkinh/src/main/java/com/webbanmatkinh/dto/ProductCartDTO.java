@@ -6,7 +6,6 @@ public class ProductCartDTO extends AbstractDTO<ProductCartDTO>{
 	private CartDTO cart;
 	private int quantity;
 	private double totalPrice;
-	// trang thai bi xoa khoi gio hang chua
 	private String status;
 	private double price;
 	

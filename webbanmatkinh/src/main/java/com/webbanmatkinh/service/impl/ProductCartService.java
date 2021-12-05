@@ -103,7 +103,9 @@ public class ProductCartService implements IProductCartService {
 			}
 			entity.setQuantity(entity.getQuantity() + 1);
 		} else {
-			entity = new ProductCartEntity(productEntity, cartEntity, 1, SystemConstant.ACTIVE_PRODUCTCART);
+			// lưu giá ở thời điểm hiện tại vào db. bởi vì nếu thay chính sách giảm giá thì sẽ ảnh hướng đến hóa đơn.
+			double price = productEntity.getPrice() - (productEntity.getPrice()*productEntity.getSale());
+			entity = new ProductCartEntity(productEntity, cartEntity, 1, SystemConstant.ACTIVE_PRODUCTCART,price);
 		}
 		cartEntity.addProductCart(entity);
 		productEntity.addProductCart(entity);
@@ -113,6 +115,7 @@ public class ProductCartService implements IProductCartService {
 		return productCartConverter.toDto(entity);
 	}
 
+	// update là xóa sản phẩm, thay đổi trang thái  == 0;
 	@Override
 	@Transactional
 	public ProductCartDTO update(Long productId, Long cartId, int quantity,HashMap<Long, ProductCartDTO> cart) {
@@ -147,16 +150,18 @@ public class ProductCartService implements IProductCartService {
 		if (productDTO != null && cart.containsKey(id)) {
 			itemCart = cart.get(id);
 			itemCart.setQuantity(itemCart.getQuantity() + 1);
-			itemCart.setTotalPrice(itemCart.getQuantity() * itemCart.getProduct().getSalePrice());
+			itemCart.setTotalPrice(itemCart.getQuantity() * itemCart.getPrice());
 			itemCart.setCart(cartDTO);
 			itemCart.setProduct(productDTO);
 			itemCart.setStatus(itemCart.getStatus());
+			itemCart.setPrice(itemCart.getProduct().getSalePrice());
 		} else {
 			itemCart.setProduct(productDTO);
 			itemCart.setCart(cartDTO);
 			itemCart.setQuantity(1);
 			itemCart.setTotalPrice(productDTO.getSalePrice());
 			itemCart.setStatus(itemCart.getStatus());
+			itemCart.setPrice(itemCart.getProduct().getSalePrice());
 		}
 		cart.put(id, itemCart);
 		return cart;
@@ -274,6 +279,9 @@ public class ProductCartService implements IProductCartService {
 		}
 		return cart;
 	}
-	
-	// truyen vao mot mang id cua san pham
+
+	@Override
+	public List<ProductCartEntity> findByProduct_id(Long id) {
+		return productCartRepository.findByProduct_id(id);
+	}
 }

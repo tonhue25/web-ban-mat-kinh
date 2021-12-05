@@ -32,7 +32,8 @@ public class CategoryController {
 		
 	// mac dinh page va limit phai co
 	@RequestMapping(value = "/quan-tri/the-loai/tat-ca-the-loai" , method = RequestMethod.GET)
-	public ModelAndView showList(@RequestParam("page") int page, HttpServletRequest request,
+	public ModelAndView showList(@RequestParam("page") int page, 
+			HttpServletRequest request,
 			@RequestParam("limit") int limit) {
 		
 		CategoryDTO model = new CategoryDTO();

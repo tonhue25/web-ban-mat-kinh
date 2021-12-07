@@ -38,13 +38,23 @@
 <body>
 	<%@ include file="/common/admin/header.jsp" %>
 	<%@ include file="/common/admin/menu.jsp" %>
+	
 	<dec:body/>
+	
 	<script src="<c:url value='/template/admin/vendors/scripts/core.js'/>"></script>
 	<script src="<c:url value='/template/admin/vendors/scripts/script.min.js'/>"></script>
 	<script src="<c:url value='/template/admin/vendors/scripts/process.js'/>"></script>
 	<script src="<c:url value='/template/admin/vendors/scripts/layout-settings.js'/>"></script>
 	<script src="<c:url value='/template/admin/src/plugins/jquery-steps/jquery.steps.js'/>"></script>
 	<script src="<c:url value='/template/admin/vendors/scripts/steps-setting.js'/>"></script>
+	
+	
+	<script src="<c:url value='/template/admin/src/plugins/apexcharts/apexcharts.min.js'/>"></script>
+	<script src="<c:url value='/template/admin/src/plugins/datatables/js/jquery.dataTables.min.js'/>"></script>
+	<script src="<c:url value='/template/admin/src/plugins/datatables/js/dataTables.bootstrap4.min.js'/>"></script>
+	<script src="<c:url value='/template/admin/src/plugins/datatables/js/dataTables.responsive.min.js'/>"></script>
+	<script src="<c:url value='/template/admin/src/plugins/datatables/js/responsive.bootstrap4.min.js'/>"></script>
+	<script src="<c:url value='/template/admin/vendors/scripts/dashboard.js'/>"></script>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twbs-pagination/1.4.2/jquery.twbsPagination.min.js"></script> 
 	<script src="<c:url value='/template/admin/paging/jquery.twbsPagination.js' />"></script>

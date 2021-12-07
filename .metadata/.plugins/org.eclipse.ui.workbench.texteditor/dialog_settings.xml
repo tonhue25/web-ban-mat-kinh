@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Default Basic Forms" key="selection"/>
+		<item value="getTotalItem" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="getTotalItem"/>
+			<item value="countAll"/>
+			<item value="count"/>
+			<item value="Compliance Trend"/>
+			<item value="Johnny Brown!"/>
 			<item value="Default Basic Forms"/>
 			<item value="paper"/>
 			<item value="page"/>
@@ -18,11 +23,6 @@
 			<item value="ro"/>
 			<item value="dw-role"/>
 			<item value="dw-rol"/>
-			<item value="dw-produ"/>
-			<item value="dw-produc"/>
-			<item value="dw-pro"/>
-			<item value="dw-cate"/>
-			<item value="dw-cat"/>
 		</list>
 		<list key="replacehistory">
 			<item value="getSalePrice"/>

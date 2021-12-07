@@ -24,7 +24,7 @@
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">Form Basic</li>
+									<li class="breadcrumb-item active" aria-current="page">User</li>
 								</ol>
 							</nav>
 						</div>
@@ -34,8 +34,8 @@
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
-							<h4 class="text-blue h4">Default Basic Forms</h4>
-							<p class="mb-30">All bootstrap element classies</p>
+							<h4 class="text-blue h4">User</h4>
+							<p class="mb-30"></p>
 						</div>
 						<div class="pull-right">
 						</div>

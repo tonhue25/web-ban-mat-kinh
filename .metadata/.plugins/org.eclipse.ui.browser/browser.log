@@ -312,3 +312,7 @@ thg 12 07, 2021 21:17:04.01 [11408:6312:1207/211704.009:ERROR:device_event_log_i
 thg 12 07, 2021 21:17:04.01 [11408:6312:1207/211704.010:ERROR:device_event_log_impl.cc(214)] [21:17:04.010] USB: usb_device_handle_win.cc:1048 Failed to read descriptor from node connection: A device attached to the system is not functioning. (0x1F)
 thg 12 07, 2021 21:17:04.01 [11408:11580:1207/211704.014:ERROR:chrome_browser_main_extra_parts_metrics.cc(240)] crbug.com/1216328: Checking default browser status ended.
 thg 12 07, 2021 21:17:08.71 [11408:10552:1207/211708.714:ERROR:get_updates_processor.cc(260)] PostClientToServerMessage() failed during GetUpdates with error 15
+thg 12 07, 2021 22:12:30.57 [11408:6312:1207/221230.571:ERROR:device_event_log_impl.cc(214)] [22:12:30.572] USB: usb_service_win.cc:258 Failed to get device driver name: Element not found. (0x490)
+thg 12 07, 2021 22:12:31.58 [11408:9460:1207/221231.586:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 12 07, 2021 22:12:52.98 [11408:9460:1207/221252.985:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106
+thg 12 07, 2021 22:13:41.01 [11408:9460:1207/221341.014:ERROR:connection_factory_impl.cc(429)] Failed to connect to MCS endpoint with error -106

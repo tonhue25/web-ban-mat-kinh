@@ -44,11 +44,11 @@ public interface IProductService {
 
 	List<ProductDTO> findAllByNewproduct(Pageable pageable, String newProduct);
 
+	ProductEntity findOne(Long id);
+	
 	int countByHotproduct(String hotProduct);
 
 	int countByNewproduct(String newProduct);
-
-	ProductEntity findOne(Long id);
 
 	int countByCategory_id(Long category_id);
 

@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="noo-sh-title-top">We are <span>Freshshop</span></h2>
+                    <h2 class="noo-sh-title-top">We are <span>PandaShop</span></h2>
                     <p></p>
 					<a class="btn hvr-hover" href="#">Read More</a>
                 </div>

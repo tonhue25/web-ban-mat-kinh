@@ -31,7 +31,7 @@
 						<h6 class="mb-20">Enter your email address to reset your password</h6>
 						<form method="post" action = "quen-mat-khau" modelAttribute="user">
 							<div class="input-group custom">
-								<input name="email" type="email" class="form-control"
+								<input name="email" type="email" class="form-control" autofocus="autofocus"
 									id="email" placeholder="Enter Email" />
 							</div>
 							<div class="row align-items-center">

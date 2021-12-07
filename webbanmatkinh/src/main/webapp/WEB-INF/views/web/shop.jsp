@@ -28,14 +28,14 @@
 					<div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
 						<div class="right-product-box">
 							<div class="product-item-filter row">
-							<%-- <form method="get" action = "">
+							<%-- <form method="get" action = "">--%>
 								<div class="col-12 col-sm-4 text-center text-sm-left">
 									<input name="keyword" type="text" class="form-control" value ="${keyword}" id="keyword" />
 								</div>
 								<div class="col-12 col-sm-2 text-center">
 									<button class="btn btn-info" type = "submit">Search</button>
 								</div>
-							</form> --%>
+							<%--</form> --%>
 							<div class="col-12 col-sm-4 text-center text-sm-right">
 									<ul class="nav nav-tabs ml-auto">
 										<li><a class="nav-link active" href="#grid-view"

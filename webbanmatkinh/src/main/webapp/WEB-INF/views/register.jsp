@@ -35,14 +35,14 @@
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Email Address*</label>
 										<div class="col-sm-8">
-											<form:input path="email" type="email" class="form-control"
+											<form:input path="email" type="email" class="form-control" autofocus="autofocus"
 												id="email" />
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Username*</label>
 										<div class="col-sm-8">
-											<form:input path="userName" type="text" class="form-control"
+											<form:input path="userName" type="text" class="form-control" autofocus="autofocus"
 												id="userName" />
 										</div>
 									</div>
@@ -56,7 +56,7 @@
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Confirm Password*</label>
 										<div class="col-sm-8">
-											<input type="password" name="confirmpassword" id="confirmpassword"  
+											<input type="password" name="confirmpassword" id="confirmpassword"   autofocus="autofocus"
 											class="form-control" required="required" autofocus="autofocus" onkeyup='check();'>
 										</div>
 									</div>
@@ -67,21 +67,21 @@
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Full Name*</label>
 										<div class="col-sm-8">
-											<form:input path="fullName" type="text" class="form-control"
+											<form:input path="fullName" type="text" class="form-control" autofocus="autofocus"
 												id="fullName" />
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Phone*</label>
 										<div class="col-sm-8">
-											<form:input path="phone" type="text" class="form-control"
+											<form:input path="phone" type="text" class="form-control" autofocus="autofocus"
 												id="tel" />
 										</div>
 									</div>
 									<div class="form-group row">
 										<label class="col-sm-4 col-form-label">Address</label>
 										<div class="col-sm-8">
-											<form:input path="address" type="text" class="form-control"
+											<form:input path="address" type="text" class="form-control" autofocus="autofocus"
 												id="address" />
 										</div>
 									</div>

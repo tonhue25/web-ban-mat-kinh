@@ -53,31 +53,31 @@
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">fullName</label>
 							<div class="col-sm-12 col-md-10">
-								<form:input path="fullName" class="form-control" type="text"/> 
+								<form:input path="fullName" autofocus="autofocus" class="form-control" type="text"/> 
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">userName</label>
 							<div class="col-sm-12 col-md-10">
-								<form:input path="userName" class="form-control" type="text"/> 
+								<form:input path="userName" autofocus="autofocus" class="form-control" type="text"/> 
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">email</label>
 							<div class="col-sm-12 col-md-10">
-								<form:input path="email" class="form-control" type="email"/>
+								<form:input path="email" autofocus="autofocus" class="form-control" type="email"/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">phone</label>
 							<div class="col-sm-12 col-md-10">
-								<form:input path="phone" class="form-control" type="tel"/>
+								<form:input path="phone" autofocus="autofocus" class="form-control" type="tel"/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">address</label>
 							<div class="col-sm-12 col-md-10">
-								<form:input path="address" class="form-control" type="text"/>
+								<form:input path="address" autofocus="autofocus" class="form-control" type="text"/>
 							</div>
 						</div>
 						<div class="form-group row">

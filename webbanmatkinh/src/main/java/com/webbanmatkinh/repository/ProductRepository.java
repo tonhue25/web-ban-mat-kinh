@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.webbanmatkinh.entity.ProductEntity;
 
-// ghi theo ten trong db
 public interface ProductRepository extends JpaRepository<ProductEntity, Long>{
+	
 	List<ProductEntity> findByCategory_id(Long category_id);
 	List<ProductEntity> findByHotproduct(String hotProduct);
 	List<ProductEntity> findByNewproduct(String newProduct);
@@ -22,7 +22,6 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long>{
 	int countByHotproduct(String hotProduct);
 	int countByCategory_id(Long category_id);
 	
-	List<ProductEntity> findByNameLike(String name);
-	Page<ProductEntity> findByNameLike(String name,Pageable pageable);
-	int countByNameLike(String name);
+	List<ProductEntity> findByNameContaining(String name);
+	Page<ProductEntity> findByNameContaining(String name,Pageable pageable);
 }

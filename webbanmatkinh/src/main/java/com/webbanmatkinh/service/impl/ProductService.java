@@ -53,7 +53,7 @@ public class ProductService implements IProductService {
 		return models;
 	}
 
-	@Override
+	/*@Override
 	public List<ProductDTO> findAllByCategory(Pageable pageable, Long categoryid) {
 		List<ProductDTO> models = new ArrayList<>();
 		List<ProductEntity> entities = findByCategory_id(categoryid, pageable).getContent();
@@ -62,28 +62,14 @@ public class ProductService implements IProductService {
 			models.add(productDTO);
 		}
 		return models;
-	}
+	}*/
 	
-	@Override
-	public List<ProductDTO> findAllByNameLike(Pageable pageable, String name) {
-		List<ProductDTO> models = new ArrayList<>();
-		List<ProductEntity> entities = findByNameLike(name,pageable).getContent();
-		for (ProductEntity item : entities) {
-			ProductDTO productDTO = productConverter.toDto(item);
-			models.add(productDTO);
-		}
-		return models;
-	}
-
 	@Override
 	public List<ProductEntity> findByCategory_id(Long category_id) {
 		return productRepository.findByCategory_id(category_id);
 	}
 
-	@Override
-	public Page<ProductEntity> findByCategory_id(Long category_id, Pageable pageable) {
-		return productRepository.findByCategory_id(category_id, pageable);
-	}
+	
 
 	@Override
 	public int getTotalItem() {
@@ -221,18 +207,23 @@ public class ProductService implements IProductService {
 	}
 
 	@Override
-	public List<ProductEntity> findByNameLike(String name) {
-		return productRepository.findByNameLike(name);
+	public List<ProductEntity> findByNameContaining(String name) {
+		return productRepository.findByNameContaining(name);
 	}
 
 	@Override
-	public Page<ProductEntity> findByNameLike(String name, Pageable pageable) {
-		return productRepository.findByNameLike(name, pageable);
+	public Page<ProductEntity> findByNameContaining(String name, Pageable pageable) {
+		return productRepository.findByNameContaining(name, pageable);
 	}
 
 	@Override
-	public int countByNameLike(String name) {
-		return productRepository.countByNameLike(name);
+	public Page<ProductEntity> findAllProductEntity(Pageable pageable) {
+		return productRepository.findAll(pageable);
+	}
+	
+	@Override
+	public Page<ProductEntity> findByCategory_id(Long category_id, Pageable pageable) {
+		return productRepository.findByCategory_id(category_id, pageable);
 	}
 
 }

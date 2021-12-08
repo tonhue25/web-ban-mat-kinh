@@ -1,0 +1,139 @@
+package com.webbanmatkinh.controller.web;
+
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.*;
+
+import com.webbanmatkinh.entity.ProductEntity;
+import com.webbanmatkinh.service.*;
+
+@Controller(value = "productControllerOfWeb")
+@RequestMapping(value = "/san-pham/")
+public class ProductController {
+
+	@Autowired
+	private ICategoryService categoryService;
+
+	@Autowired
+	private IProductService productService;
+
+	/*
+	 * @RequestMapping(value = "{categoryCode}", method = RequestMethod.GET) public
+	 * ModelAndView showProduct(
+	 * 
+	 * @PathVariable(value = "categoryCode", required = false) String categoryCode,
+	 * 
+	 * @RequestParam("page") int page, HttpServletRequest request,
+	 * 
+	 * @RequestParam("limit") int limit) { ModelAndView mav = new
+	 * ModelAndView("web/shop"); mav.addObject("categories",
+	 * categoryService.findAll()); ProductDTO model = new ProductDTO();
+	 * model.setPage(page); model.setLimit(limit); Pageable pageable = new
+	 * PageRequest(page - 1, limit); if (categoryCode.contains("danh-sach")) {
+	 * model.setListResult(productService.findAll(pageable));
+	 * model.setTotalItem(productService.getTotalItem()); } else if
+	 * (categoryCode.contains("hot-products")) {
+	 * model.setListResult(productService.findAllByHotproduct(pageable,
+	 * SystemConstant.HOT_PRODUCT));
+	 * model.setTotalItem(productService.countByHotproduct(SystemConstant.
+	 * HOT_PRODUCT)); } else if (categoryCode.contains("new-products")) {
+	 * model.setListResult(productService.findAllByNewproduct(pageable,
+	 * SystemConstant.NEW_PRODUCT));
+	 * model.setTotalItem(productService.countByNewproduct(SystemConstant.
+	 * NEW_PRODUCT)); } else { Long id =
+	 * categoryService.findOneByCode(categoryCode).getId();
+	 * model.setListResult(productService.findAllByCategory(pageable, id));
+	 * model.setTotalItem(productService.countByCategory_id(id)); }
+	 * model.setTotalPage((int) Math.ceil((double) model.getTotalItem() /
+	 * model.getLimit())); mav.addObject("products", model); return mav; }
+	 */
+
+	/*
+	 * @RequestMapping(value = "danh-sach", method = RequestMethod.GET) public
+	 * String showProduct(
+	 * 
+	 * @RequestParam(value = "name" , required = false) String name, ModelMap model,
+	 * 
+	 * @RequestParam("page") Optional<Integer> page,
+	 * 
+	 * @RequestParam("size") Optional<Integer> size ) { // bat dau bang trang dau
+	 * tien. int currentPage = page.orElse(0); int pageSize = size.orElse(6);
+	 * Pageable pageable = new PageRequest(currentPage, pageSize);
+	 * Page<ProductEntity> resultList = null;
+	 * 
+	 * if(StringUtils.hasText(name)) { resultList =
+	 * productService.findByNameContaining(name,pageable);
+	 * model.addAttribute("name", name); } else { resultList =
+	 * productService.findAllProductEntity(pageable); } int totalPages =
+	 * resultList.getTotalPages(); if(totalPages > 0 ) { int start = Math.max(0,
+	 * currentPage - 1); int end = Math.min(currentPage + 1, totalPages);
+	 * if(totalPages > 6) { if(end == totalPages) start = end - 6; else if(start ==
+	 * 0) end = start + 6; } List<Integer> pageNumbers =
+	 * IntStream.rangeClosed(start, end).boxed().collect(Collectors.toList());
+	 * model.addAttribute("pageNumbers", pageNumbers); }
+	 * model.addAttribute("products", resultList); model.addAttribute("categories",
+	 * categoryService.findAll()); return "web/shop"; }
+	 */
+
+	@RequestMapping(value = "danh-sach", method = RequestMethod.GET)
+	public String showProduct(@RequestParam(value = "name", required = false) String name, ModelMap model,
+			@RequestParam("page") Optional<Integer> page, @RequestParam("size") Optional<Integer> size) {
+		// bat dau bang trang dau tien.
+		int currentPage = page.orElse(0);
+		int pageSize = size.orElse(6);
+		Pageable pageable = new PageRequest(currentPage, pageSize);
+		Page<ProductEntity> resultList = null;
+
+		if (StringUtils.hasText(name)) {
+			
+			resultList = productService.findByNameContaining(name, pageable);
+			model.addAttribute("name", name);
+			
+		} else if (name.equals("mat-kinh-tre-em") || name.equals("mat-kinh-nam") || ) {
+			Long id = categoryService.findOneByCode(name).getId();
+			resultList = productService.findByCategory_id(id, pageable);
+			model.addAttribute("name", name);
+			
+		} else if (name.equals("mat-kinh-nam")) {
+			
+			resultList = productService.findByNameContaining(name, pageable);
+			model.addAttribute("name", name);
+			
+		} else if (name.equals("mat-kinh-nu")) {
+			
+			resultList = productService.findByNameContaining(name, pageable);
+			model.addAttribute("name", name);
+			
+		} else {
+			
+			resultList = productService.findAllProductEntity(pageable);
+		}
+		int totalPages = resultList.getTotalPages();
+		if (totalPages > 0) {
+			int start = Math.max(0, currentPage - 1);
+			int end = Math.min(currentPage + 1, totalPages);
+			if (totalPages > 6) {
+				if (end == totalPages)
+					start = end - 6;
+				else if (start == 0)
+					end = start + 6;
+			}
+			List<Integer> pageNumbers = IntStream.rangeClosed(start, end).boxed().collect(Collectors.toList());
+			model.addAttribute("pageNumbers", pageNumbers);
+		}
+		model.addAttribute("products", resultList);
+		model.addAttribute("categories", categoryService.findAll());
+		return "web/shop";
+	}
+
+}

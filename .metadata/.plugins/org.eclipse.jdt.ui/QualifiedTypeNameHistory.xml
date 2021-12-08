@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.webbanmatkinh.service.IRoleService"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.repository.RoleRepository"/>
-<fullyQualifiedTypeName name="com.paypal.api.payments.Payer"/>
-<fullyQualifiedTypeName name="com.paypal.api.payments.PayerInfo"/>
-<fullyQualifiedTypeName name="com.paypal.api.payments.RedirectUrls"/>
-<fullyQualifiedTypeName name="com.paypal.api.payments.Details"/>
-<fullyQualifiedTypeName name="com.paypal.api.payments.Amount"/>
 <fullyQualifiedTypeName name="javax.transaction.Transaction"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.ItemList"/>
 <fullyQualifiedTypeName name="com.paypal.api.payments.Item"/>
@@ -50,14 +43,21 @@
 <fullyQualifiedTypeName name="com.webbanmatkinh.service.IProductCartService"/>
 <fullyQualifiedTypeName name="com.webbanmatkinh.repository.ProductRepository"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
-<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.FactoryBean"/>
 <fullyQualifiedTypeName name="org.apache.taglibs.standard.lang.jstl.test.beans.Factory"/>
 <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.webbanmatkinh.entity.ProductEntity"/>
 <fullyQualifiedTypeName name="com.mysql.cj.Session"/>
 <fullyQualifiedTypeName name="com.webbanmatkinh.service.IUserService"/>
 <fullyQualifiedTypeName name="com.webbanmatkinh.service.ICategoryService"/>
+<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+<fullyQualifiedTypeName name="org.springframework.util.StringUtils"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.webbanmatkinh.entity.ProductEntity"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="org.springframework.data.domain.Pageable"/>
+<fullyQualifiedTypeName name="org.springframework.data.domain.PageRequest"/>
+<fullyQualifiedTypeName name="org.springframework.data.domain.Page"/>
+<fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

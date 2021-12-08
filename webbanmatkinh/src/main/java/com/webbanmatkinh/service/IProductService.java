@@ -11,6 +11,8 @@ import com.webbanmatkinh.entity.ProductEntity;
 public interface IProductService {
 
 	List<ProductDTO> findAll(Pageable pageable);
+	
+	Page<ProductEntity> findAllProductEntity(Pageable pageable) ;
 
 	int getTotalItem();
 
@@ -26,7 +28,7 @@ public interface IProductService {
 
 	void deleteByCategory(Long categoryid);
 
-	List<ProductDTO> findAllByCategory(Pageable pageable, Long categoryid);
+	/*List<ProductDTO> findAllByCategory(Pageable pageable, Long categoryid);*/
 
 	Page<ProductEntity> findByCategory_id(Long category_id, Pageable pageable);
 
@@ -56,11 +58,7 @@ public interface IProductService {
 
 	List<ProductDTO> findAllByNewproduct(String newProduct);
 
-	List<ProductEntity> findByNameLike(String name);
+	Page<ProductEntity> findByNameContaining(String name, Pageable pageable);
 
-	Page<ProductEntity> findByNameLike(String name, Pageable pageable);
-
-	List<ProductDTO> findAllByNameLike(Pageable pageable, String name);
-
-	int countByNameLike(String name);
+	List<ProductEntity> findByNameContaining(String name);
 }

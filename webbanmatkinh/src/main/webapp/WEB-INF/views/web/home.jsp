@@ -7,7 +7,6 @@
 </head>
 <body>
      <%@ include file="/common/web/slider.jsp" %>
-    <!-- Start Categories  -->
     <div class="categories-shop">
         <div class="container">
             <div class="row">
@@ -33,9 +32,7 @@
             </div>
         </div>
     </div>
-    <!-- End Categories -->
-	
-    <!-- Start Products  -->
+
     <div class="products-box">
         <div class="container">
             <div class="row">
@@ -137,7 +134,6 @@
 		});
 	});
 	
-	/* hàm này ok rồi nè */
 	function addtocart() {
        Swal.fire({
      	   position: 'center',

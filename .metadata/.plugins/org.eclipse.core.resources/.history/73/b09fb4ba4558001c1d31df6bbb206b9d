@@ -1,0 +1,106 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@include file="/common/taglib.jsp"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>ABOUT US</h2>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">About us</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+
+    <!-- Start About Page  -->
+    <div class="about-box-main">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-7">
+                    <div class="banner-frame"> <img class="img-fluid" src="<c:url value='/template/image/avatar.jpg'/>" alt="" />
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h2 class="noo-sh-title-top">We are <span>PandaShop</span></h2>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row my-5">
+              <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                    <h3>Flash Sale!!</h3>
+                        <img class="img-fluid" src="<c:url value='/template/image/image18.png'/>" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>New Product!!</h3>
+                        <img class="img-fluid" src="<c:url value='/template/image/image20.png'/>" alt="" />
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="service-block-inner">
+                        <h3>Hot product</h3>
+                        <img class="img-fluid" src="<c:url value='/template/image/image5.png'/>" alt="" />
+                    </div>
+                </div>
+                </div>
+            <div class="row my-4">
+                <div class="col-12">
+                    
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                   
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                   
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                   
+                </div>
+                <div class="newsletter">
+		<div class="newsletter_content">
+			<div class="newsletter_image" style="background-image:url(/template/image/image5.png)"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title_container text-center">
+							<div class="section_subtitle">only the best</div>
+							<div class="section_title">subscribe for a 20% discount</div>
+						</div>
+					</div>
+				</div>
+				<div class="row newsletter_container">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="newsletter_form_container">
+							<form action="#">
+								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
+								<button type="submit" class="newsletter_button">subscribe</button>
+							</form>
+						</div>
+						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

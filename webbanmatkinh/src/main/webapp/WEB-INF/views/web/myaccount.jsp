@@ -36,7 +36,7 @@
 							</div>
 							<div class="form-group col-md-6">
 								<label for="phone" class="mb-0"> Phone</label>
-								<form:input path="phone" type="text" class="form-control"
+								<form:input path="phone" type="tel" class="form-control"
 									id="phone" placeholder="Enter Phone" />
 							</div>
 							<div class="form-group col-md-12">
@@ -45,7 +45,7 @@
 									id="address" placeholder="Enter Address" />
 							</div>
 						</div>
-						<button type="submit" class="btn hvr-hover"> Save</button>
+						<button type="submit" class="btn hvr-hover">Save</button>
 					</form:form>
 				</div>
 			</div>

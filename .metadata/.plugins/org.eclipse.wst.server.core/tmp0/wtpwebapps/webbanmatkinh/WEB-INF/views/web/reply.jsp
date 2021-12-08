@@ -12,7 +12,7 @@
 				<div class="col-sm-2 col-lg-2"></div>
 				<div class="col-sm-8 col-lg-8 mb-3">
 					<div class="title-left">
-						<h3></i> You have successfully placed your order</h3>
+						<h3> You have successfully placed your order</h3>
 					</div>				
 				</div>
 				<div class="col-sm-2 col-lg-2"></div>

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<!-- Start All Title Box -->
+	
     <div class="all-title-box">
         <div class="container">
             <div class="row">
@@ -22,9 +22,7 @@
             </div>
         </div>
     </div>
-    <!-- End All Title Box -->
-
-    <!-- Start Cart  -->
+    
     <div class="cart-box-main">
         <div class="container">
             <div class="row">
@@ -63,7 +61,6 @@
                                     <td class="price-pr">
                                         <p> $${item.total}</p>
                                     </td>
-                                    
                                 </tr>
                                 </c:forEach>
                             </tbody>

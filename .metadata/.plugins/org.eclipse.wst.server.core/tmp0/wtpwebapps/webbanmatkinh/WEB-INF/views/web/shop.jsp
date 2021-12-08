@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="all-title-box">
+	<!-- <div class="all-title-box">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -20,23 +20,26 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<form  action="<c:url value='/san-pham/danh-sach'/>"  id="formSubmit" method="get">
+	</div> -->
+	<form action="<c:url value='/san-pham/danh-sach'/>" id="formSubmit"
+		method="get">
 		<div class="shop-box-inner">
 			<div class="container">
 				<div class="row">
-					<div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
+					<div
+						class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-right">
 						<div class="right-product-box">
 							<div class="product-item-filter row">
-							<%-- <form method="get" action = "">--%>
+								<%-- <form method="get" action = "">--%>
 								<div class="col-12 col-sm-4 text-center text-sm-left">
-									<input name="keyword" type="text" class="form-control" value ="${keyword}" id="keyword" />
+									<input name="keyword" type="text" class="form-control"
+										value="${keyword}" id="keyword" />
 								</div>
 								<div class="col-12 col-sm-2 text-center">
-									<button class="btn btn-info" type = "submit">Search</button>
+									<button class="btn btn-info" type="submit">Search</button>
 								</div>
-							<%--</form> --%>
-							<div class="col-12 col-sm-4 text-center text-sm-right">
+								<%--</form> --%>
+								<div class="col-12 col-sm-4 text-center text-sm-right">
 									<ul class="nav nav-tabs ml-auto">
 										<li><a class="nav-link active" href="#grid-view"
 											data-toggle="tab"> <i class="fa fa-th"></i>
@@ -45,8 +48,9 @@
 											data-toggle="tab"> <i class="fa fa-list-ul"></i>
 										</a></li>
 									</ul>
+								</div>
 							</div>
-						</div>
+
 							<div class="product-categorie-box">
 								<div class="tab-content">
 									<div role="tabpanel" class="tab-pane fade show active"
@@ -164,9 +168,11 @@
 								<div
 									class="list-group list-group-collapse list-group-sm list-group-tree"
 									id="list-group-men" data-children=".sub-men">
-									<form action="<c:url value='/san-pham/${item.key}?page=1&limit=6'/>" id="ds" method="get">
+									<form action="<c:url value='/san-pham/${item.key}?page=1&limit=6'/>"
+										id="ds" method="get">
 										<c:forEach var="item" items="${categories}">
-											<a href="<c:url value='/san-pham/${item.key}?page=1&limit=6'/>"
+											<a
+												href="<c:url value='/san-pham/${item.key}?page=1&limit=6'/>"
 												class="list-group-item list-group-item-action">
 												${item.value} <small class="text-muted"> </small>
 											</a>
@@ -185,8 +191,8 @@
 					<div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12">
 						<nav aria-label="Page navigation">
 							<ul class="pagination" id="pagination"></ul>
-							<input type="hidden" value="" id="page" name="page" /> 
-							<input type="hidden" value="" id="limit" name="limit" />
+							<input type="hidden" value="" id="page" name="page" /> <input
+								type="hidden" value="" id="limit" name="limit" />
 						</nav>
 					</div>
 					<div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12"></div>
@@ -194,8 +200,8 @@
 			</div>
 		</div>
 	</form>
-	
-	<content tag="script"> 
+
+	<!-- <content tag="script"> 
 	<script>
 		var totalPages = ${products.totalPage};
 		var currentPage = ${products.page};
@@ -238,6 +244,6 @@
 			})
 		};
 	</script> 
-	</content>
+	</content> -->
 </body>
 </html>
